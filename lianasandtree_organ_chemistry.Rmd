@@ -1,0 +1,623 @@
+---
+title: "Liana and tree tissues chemistry"
+author: "[**_Gbadamassi G.O. Dossa_**](https://scholar.google.com/citations?user=w20AkZcAAAAJ&hl=en)"
+date: (Created on Jan 3 2022 and last updated on `r format(Sys.time(), "%a %b %d %Y %H:%M:%S")`)
+output: 
+#rmdformats::material
+  html_document:
+    fig_caption: yes #Enabling figure caption
+    theme: spacelab #readable #sandstone #spacelab #flatly
+    highlight: pygments #tango #kate
+    toc: TRUE # Enabling table of content (toc) on the left side of output
+    toc_depth: 3 # Showing toc up to 3 headings below (i.e.,1, 1.1, 1.1.1)
+    number_sections: TRUE # Number sections
+    toc_float:
+      collapsed: TRUE # Allows the toc to collapse if the reading section is not concerned
+      smooth_scroll: TRUE # Allows smoth scrolling of toc
+      toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Here, we are reporting the differences in chemical content of different tissues of lianas and not lianas (self-supporting trees).  
+This chemistry here is the initial quality of both wood and bark of fie species of lianas and five species of trees with a dbh of 2.5 cm on average. We used logs from those ten species to set up an experiment in the secondary rainforest of XTBG in December 2021. 
+
+# Input chemistry data
+
+## Setting up data
+
+```{r, setup_data}
+library(tidyverse)
+ini_chem<-readr::read_csv("liana wood bark ten species initial chemistry.csv")
+head(ini_chem)
+summary(ini_chem)
+ini_chem$ID<-as.factor(ini_chem$ID)
+ini_chem$Species<-as.factor(ini_chem$Species)
+ini_chem$growth_form<-as.factor(ini_chem$growth_form)
+ini_chem$Tissue<-as.factor(ini_chem$Tissue)
+ini_chem$Position<-as.factor(ini_chem$Position)
+```
+
+## Compute chemical traits average per tissue
+
+```{r}
+ini_chem_tissue<-ini_chem%>%
+  group_by(Species, growth_form, Tissue)%>%
+  dplyr::summarise(mean_C=mean(C_percent, na.rm=T),
+                   mean_N=mean(N_percent, na.rm=T),
+                   mean_P=mean(P_percent, na.rm=T),
+                   mean_Mg=mean(Mg_percent, na.rm=T),
+                   mean_Ca=mean(Ca_percent, na.rm=T),
+                   mean_Lignin=mean(Lignin_percent, na.rm=T),
+                   mean_Tannin=mean(Condensed_tannin_percent, na.rm=T)
+)
+ini_chem_tissue
+```
+
+
+```{r}
+ini_chem_tissue2<-ini_chem%>%
+  group_by(growth_form, Tissue)%>%
+  dplyr::summarise(mean_C=mean(C_percent, na.rm=T),
+                   mean_N=mean(N_percent, na.rm=T),
+                   mean_P=mean(P_percent, na.rm=T),
+                   mean_Mg=mean(Mg_percent, na.rm=T),
+                   mean_Ca=mean(Ca_percent, na.rm=T),
+                   mean_Lignin=mean(Lignin_percent, na.rm=T),
+                   mean_Tannin=mean(Condensed_tannin_percent, na.rm=T)
+)
+ini_chem_tissue2
+```
+
+# Update calculation and calculations of means and SD with new data from articles
+
+After the manuscript got reject with permission to resubmit at "Frontiers in Forest and Global Change", Dossa contacted Wyka who agreed to collaborate with his colleague. Thus, they provided a database of 10 000 entries of data comparing trees, lianas, and shrubs. Moreover, we have added few more articles data (we found in the literature): Li et al 2013, Scowcroft 1997, Heineman et al 2016, Dossa et al 2016, Jones et al 2019, Jones et al 2020, Dossa et al 2020. Moreover, we go the initial raw data from Roeder et al 2022, and finally unpublished data from Dossa. Now, we are able to compute the mean and standard error of the following traits: Nitrogen (N), Phosphorus (P), Calcium (Ca), Magnesium (Mg), Carbon (C), Tannins (condensed and water soluble), and Lignin.
+
+## Input file
+```{r}
+litterquality<-read_csv(file="Liana_perspective_datab.csv",
+                        col_types = list(`Literature Source` = col_character(),
+  Kingdom = col_character(),
+  Subkingdom = col_character(),
+  Division = col_character(),
+  Class = col_character(),
+  Subclass = col_character(),
+  Order = col_character(),
+  Family = col_character(),
+  Genus = col_character(),
+  Species = col_character(),
+  `Life Form` = col_character(),
+  Latitude = col_double(),
+  Longitude = col_double(),
+  `MAT(degC)` = col_double(),
+  `MAP(mm)` = col_double(),
+  Altitude = col_double(),
+  Site1 = col_character(),
+  Country = col_character(),
+  Continent = col_character(),
+  ClimRegion = col_character(),
+  Tissue = col_character(),
+  SLA = col_double(),
+  LMA = col_double(),
+  Nitrogen = col_double(),
+  Phosphorus = col_double(),
+  Calcium = col_double(),
+  Magnesium = col_double(),
+  Carbon = col_double(),
+  Tannins_cond = col_double(),
+  Tannins_wat = col_double(),
+  Lignin = col_double(),
+  Cellulose_percent = col_double(),
+  Hemicellulose_percent = col_double(),
+  Fiber_content_percent = col_double()))
+```
+
+
+
+## Compute chemical traits average per tissue
+
+
+```{r}
+glimpse(litterquality)
+litterquality_avg<-litterquality%>%
+  rename(Life_form=`Life_form`)%>%
+  mutate(Life_form=as.factor(Life_form),
+         Tissue=as.factor(Tissue),
+         SLA=as.numeric(SLA),
+         LMA=as.numeric(LMA),
+         Tannins_cond=as.numeric(Tannins_cond),
+         Tannins_wat=as.numeric(Tannins_wat),
+         Cellulose=Cellulose_percent, 
+         Hemi_cellu=Hemicellulose_percent,
+         Fiber=Fiber_content_percent,
+         Magnesium=as.numeric(Magnesium))%>%
+    group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   mean_C=mean(Carbon, na.rm=T),
+                   SD_C=sd(Carbon, na.rm=T),
+                   mean_N=mean(Nitrogen, na.rm=T),
+                   SD_N=sd(Nitrogen, na.rm=T),
+                   mean_P=mean(Phosphorus, na.rm=T),
+                   SD_P=sd(Phosphorus, na.rm=T),
+                   mean_Mg=mean(Magnesium, na.rm=T),
+                   SD_Mg=sd(Magnesium, na.rm=T),
+                   mean_Ca=mean(Calcium, na.rm=T),
+                   SD_Ca=sd(Calcium, na.rm=T),
+                   mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
+                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
+                   size=n()
+)
+litterquality_avg
+```
+
+
+Select Dilleniaceae family and compare their means with the liana mean 
+
+```{r}
+glimpse(litterquality)
+litterquality_Dil<-litterquality%>%
+  filter(str_detect(Family,'Dilleniaceae'))%>%
+  group_by(Family, Tissue, Life_form)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   mean_C=mean(Carbon, na.rm=T),
+                   SD_C=sd(Carbon, na.rm=T),
+                   mean_N=mean(Nitrogen, na.rm=T),
+                   SD_N=sd(Nitrogen, na.rm=T),
+                   mean_P=mean(Phosphorus, na.rm=T),
+                   SD_P=sd(Phosphorus, na.rm=T),
+                   mean_Mg=mean(Magnesium, na.rm=T),
+                   SD_Mg=sd(Magnesium, na.rm=T),
+                   mean_Ca=mean(Calcium, na.rm=T),
+                   SD_Ca=sd(Calcium, na.rm=T),
+                   mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
+                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
+                   size=n()
+)
+litterquality_Dil
+```
+
+A reviewer of the manuscript mentioned about low nutrient in the family of Dilleniaceae. Thus, I subset the family of Dilleniaceae above and compare the nutrients with the average computed for all liana leaves. We found that although our database contains only one species that belongs to this family, its nutrients concentrations are way below the liana means. For instance, Dilleniacea has N = 14.7 vs liana N (23.096 mg g-1), while Dilleniaceae has P = 0.79 vs. liana P (1.63 mg g-1). I could then conclude that it is possible that Dilleniaceae has low nutrient but more data are needed to confirm such trend.
+
+
+## Compute chemical traits average per tissue with sample size per element
+One of our co-authors Wyka ask to be more specific about where data come from and give the sample size per chemical element. 
+
+SLA
+```{r}
+SLA_avg<-litterquality%>%
+  select(Tissue, Life_form, SLA)%>%
+  filter(!str_detect(SLA,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   size_SLA=n()
+)
+SLA_avg
+```
+
+
+LMA
+```{r}
+LMA_avg<-litterquality%>%
+  select(Tissue, Life_form, LMA)%>%
+  filter(!str_detect(LMA,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   size_LMA=n()
+)
+LMA_avg
+```
+Nitrogen
+```{r}
+Nitrogen_avg<-litterquality%>%
+  select(Tissue, Life_form, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Nitrogen=mean(Nitrogen, na.rm=T),
+                   SD_Nitrogen=sd(Nitrogen, na.rm=T),
+                   size_Nitrogen=n()
+)
+Nitrogen_avg
+```
+
+Phosphorus
+```{r}
+Phosphorus_avg<-litterquality%>%
+  select(Tissue, Life_form, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Phosphorus=mean(Phosphorus, na.rm=T),
+                   SD_Phosphorus=sd(Phosphorus, na.rm=T),
+                   size_Phosphorus=n()
+)
+Phosphorus_avg
+```
+
+
+Carbon
+```{r}
+Carbon_avg<-litterquality%>%
+  select(Tissue, Life_form, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Carbon=mean(Carbon, na.rm=T),
+                   SD_Carbon=sd(Carbon, na.rm=T),
+                   size_Carbon=n()
+)
+Carbon_avg
+```
+
+Lignin
+
+```{r}
+Lignin_avg<-litterquality%>%
+  select(Tissue, Life_form, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   size_Lignin=n()
+)
+Lignin_avg
+```
+
+```{r}
+Tannins_wat_avg<-litterquality%>%
+  select(Tissue, Life_form, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Tannin_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   size_Tannin_wat=n()
+)
+Tannins_wat_avg
+```
+```{r}
+Tannins_cond_avg<-litterquality%>%
+  select(Tissue, Life_form, Tannins_cond)%>%
+  filter(!str_detect(Tannins_cond,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
+                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
+                   size_Tannin_cond=n()
+)
+Tannins_cond_avg
+```
+
+
+Magnesium
+```{r}
+Magnesium_avg<-litterquality%>%
+  select(Tissue, Life_form, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Magnesium=mean(Magnesium, na.rm=T),
+                   SD_Magnesium=sd(Magnesium, na.rm=T),
+                   size_Magnesium=n()
+)
+Magnesium_avg
+```
+
+Calcium
+```{r}
+Calcium_avg<-litterquality%>%
+  select(Tissue, Life_form, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_Calcium=mean(Calcium, na.rm=T),
+                   SD_Calcium=sd(Calcium, na.rm=T),
+                   size_Calcium=n()
+)
+Calcium_avg
+```
+
+
+
+```{r}
+litterquality_avg2<-litterquality%>%
+  group_by(Tissue, Life_form)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   size_SLA=n(),
+                   mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   size_LMA=n(),
+                   mean_C=mean(Carbon, na.rm=T),
+                   SD_C=sd(Carbon, na.rm=T),
+                   size_C=n(),
+                   mean_N=mean(Nitrogen, na.rm=T),
+                   SD_N=sd(Nitrogen, na.rm=T),
+                   size_N=n(),
+                   mean_P=mean(Phosphorus, na.rm=T),
+                   SD_P=sd(Phosphorus, na.rm=T),
+                   size_P=n(),
+                   mean_Mg=mean(Magnesium, na.rm=T),
+                   SD_Mg=sd(Magnesium, na.rm=T),
+                   size_Mg=n(),
+                   mean_Ca=mean(Calcium, na.rm=T),
+                   SD_Ca=sd(Calcium, na.rm=T),
+                   size_Ca=n(),
+                   mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   size_Lignin=n(),
+                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   size_Tannin_wat=n(),
+                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
+                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
+                   size_Tannin_cond=n()
+)
+litterquality_avg2
+```
+
+
+## Carry out t.test on different chemical and per organ
+
+This was asked by Richard Corlett and he suggests to carry out these analyses and report the limitations of the data anyway.
+
+SLA
+Leaf
+```{r}
+SLA<-litterquality%>%
+  select(Tissue, Life_form, SLA)%>%
+  filter(!str_detect(SLA,'NA'))
+SLA
+t.test(data=SLA, SLA~Life_form)
+```
+
+
+LMA
+Leaf
+```{r}
+LMA<-litterquality%>%
+  select(Tissue, Life_form, LMA)%>%
+  filter(!str_detect(LMA,'NA'))
+LMA
+t.test(data=LMA, LMA~Life_form)
+```
+Nitrogen
+Leaf
+```{r}
+Nitrogen_leaf<-litterquality%>%
+  select(Tissue, Life_form, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Nitrogen_leaf
+t.test(data=Nitrogen_leaf, Nitrogen~Life_form)
+```
+
+bark
+
+```{r}
+Nitrogen_bark<-litterquality%>%
+  select(Tissue, Life_form, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Nitrogen_bark
+t.test(data=Nitrogen_bark, Nitrogen~Life_form)
+```
+
+wood
+
+```{r}
+Nitrogen_wood<-litterquality%>%
+  select(Tissue, Life_form, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Nitrogen_wood
+t.test(data=Nitrogen_wood, Nitrogen~Life_form)
+```
+Phosphorus
+
+leaf
+```{r}
+Phosphorus_leaf<-litterquality%>%
+  select(Tissue, Life_form, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Phosphorus_leaf
+t.test(data=Phosphorus_leaf, Phosphorus~Life_form)
+```
+
+bark
+```{r}
+Phosphorus_bark<-litterquality%>%
+  select(Tissue, Life_form, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Phosphorus_bark
+t.test(data=Phosphorus_bark, Phosphorus~Life_form)
+```
+
+wood
+```{r}
+Phosphorus_wood<-litterquality%>%
+  select(Tissue, Life_form, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Phosphorus_wood
+t.test(data=Phosphorus_wood, Phosphorus~Life_form)
+```
+Carbon
+
+leaf
+```{r}
+Carbon_leaf<-litterquality%>%
+  select(Tissue, Life_form, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Carbon_leaf
+t.test(data=Carbon_leaf, Carbon~Life_form)
+```
+
+bark
+```{r}
+Carbon_bark<-litterquality%>%
+  select(Tissue, Life_form, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Carbon_bark
+t.test(data=Carbon_bark, Carbon~Life_form)
+```
+wood
+```{r}
+Carbon_wood<-litterquality%>%
+  select(Tissue, Life_form, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Carbon_wood
+t.test(data=Carbon_wood, Carbon~Life_form)
+```
+
+Lignin
+
+leaf
+```{r}
+Lignin_leaf<-litterquality%>%
+  select(Tissue, Life_form, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Lignin_leaf
+t.test(data=Lignin_leaf, Lignin~Life_form)
+```
+
+bark
+```{r}
+Lignin_bark<-litterquality%>%
+  select(Tissue, Life_form, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Lignin_bark
+t.test(data=Lignin_bark, Lignin~Life_form)
+```
+
+wood
+```{r}
+Lignin_wood<-litterquality%>%
+  select(Tissue, Life_form, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Lignin_wood
+t.test(data=Lignin_wood, Lignin~Life_form)
+```
+
+Soluble tannins
+
+leaf
+```{r}
+glimpse(litterquality)
+Tannins_wat_leaf<-litterquality%>%
+  select(Tissue, Life_form, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Tannins_wat_leaf
+t.test(data=Tannins_wat_leaf, Tannins_wat~Life_form)
+```
+
+Condensed tannins
+bark
+
+```{r}
+Tannins_cond_bark<-litterquality%>%
+  select(Tissue, Life_form, Tannins_cond)%>%
+  filter(!str_detect(Tannins_cond,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Tannins_cond_bark
+t.test(data=Tannins_cond_bark, Tannins_cond~Life_form)
+```
+
+wood
+
+```{r}
+Tannins_cond_wood<-litterquality%>%
+  select(Tissue, Life_form, Tannins_cond)%>%
+  filter(!str_detect(Tannins_cond,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Tannins_cond_wood
+t.test(data=Tannins_cond_wood, Tannins_cond~Life_form)
+```
+
+
+
+Calcium
+
+leaf
+```{r}
+Calcium_leaf<-litterquality%>%
+  select(Tissue, Life_form, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Calcium_leaf
+t.test(data=Calcium_leaf, Calcium~Life_form)
+```
+
+bark
+```{r}
+Calcium_bark<-litterquality%>%
+  select(Tissue, Life_form, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Calcium_bark
+t.test(data=Calcium_bark, Calcium~Life_form)
+```
+
+wood
+```{r}
+Calcium_wood<-litterquality%>%
+  select(Tissue, Life_form, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Calcium_wood
+t.test(data=Calcium_wood, Calcium~Life_form)
+```
+
+Magnesium
+
+leaf
+```{r}
+Magnesium_leaf<-litterquality%>%
+  select(Tissue, Life_form, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))
+Magnesium_leaf
+t.test(data=Magnesium_leaf, Magnesium~Life_form)
+```
+
+bark
+```{r}
+Magnesium_bark<-litterquality%>%
+  select(Tissue, Life_form, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'bark'))
+Magnesium_bark
+t.test(data=Magnesium_bark, Magnesium~Life_form)
+```
+
+wood
+```{r}
+Magnesium_wood<-litterquality%>%
+  select(Tissue, Life_form, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'wood'))
+Magnesium_wood
+t.test(data=Magnesium_wood, Magnesium~Life_form)
+```
