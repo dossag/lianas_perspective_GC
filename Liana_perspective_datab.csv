@@ -88,7 +88,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae/Mi
 NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer campestre,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer campestre,T,NA,NA,7.2,652,NA,NA,Germany,E,TE,leaf,104.71,95.5,19.4,1.901,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer campestre,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,121.9,82,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer campestre,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer campestre,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer ginnala T,T,46,119.2,-0.4,NA,NA,"Xilin River basin,Inner Mongolia",China,Asi,TE,leaf,NA,NA,23.3,2.98,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer lucidum,T,28,107.4,14.49,NA,NA,North Guizhou,China,Asi,TR,leaf,NA,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 741,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer mandshuricum,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -109,7 +109,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceracea
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,NA,NA,14.3,1010,NA,NA,France,E,Medi,leaf,144.54,69.2,21.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,NA,NA,11.7,1148,NA,NA,France,E,Medi,leaf,125.89,79.4,17.9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 758,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,42.43,6.58,13.6,1100,NA,NA,France,E,Medi,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 801,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer monspessulanum,T,41,-5.7,10.3,531,1100,NA,Spain,E,Medi,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,227,44.1,27,1.3,7.6,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,208,48.1,24,2.3,8.7,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -120,12 +120,12 @@ Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,A
 NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,NA,NA,6.1,883,NA,NA,Canada,NAm,TE,leaf,269.15,37.2,25,1.698,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,123.32,81.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 826,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer negundo,T,45.73,-72.08,3.4,932,NA,Quebec,Canada,NAm,B,leaf,262.12,38.2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer opalus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 653,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer opalus,T,39.54,2.7,17,461,4,NA,Spain,E,Medi,leaf,176.8,56.6,32.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer opalus,T,NA,NA,16.8,857,NA,NA,Spain,E,Medi,leaf,177.83,56.2,32.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer opalus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer opalus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer palmatum,T,NA,NA,6.8,1216,NA,NA,Japan,Asi,TE,leaf,223.87,44.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pensylvanicum,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,333,30,16,1.2,2.7,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pensylvanicum,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,333,30,13,2,4.2,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -163,7 +163,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceracea
 696,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer platanoides,T,51,9.31,8.6,698,450,NA,Germany,E,TE,leaf,NA,NA,25,NA,6,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer platanoides,T,51.09,10.52,7.5,669,290,NA,Germany,E,TE,leaf,192,52.1,26.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 700,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer platanoides,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,275.03,36.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer platanoides,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer platanoides,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 OLEKSYN/KAROLEW,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,51.23,NA,7.5,NA,NA,Siemianice,Poland,E,TE,leaf,161.79,61.8,22,1.763,14.865,NA,NA,NA,NA,NA,NA,NA,NA,live
 8,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,NA,NA,NA,NA,NA,NA,UK,E,TE,leaf,NA,NA,22.4,3.28,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 14,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,NA,NA,NA,NA,NA,NA,Slovenia,E,TE,leaf,NA,NA,12.6,0.89,6.77,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -178,7 +178,7 @@ Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sa
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,51.09,10.52,7.5,669,290,saplings,Germany,E,TE,leaf,338,29.6,26,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,51.09,10.52,7.5,669,290,adult-lower_canopy,Germany,E,TE,leaf,342,29.2,33.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,51.09,10.52,7.5,669,290,adult-upper_canopy,Germany,E,TE,leaf,119,84,25.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudoplatanus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 741,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer pseudosieboldianum,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 18,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer rubrum,T,46.7,NA,3.9,NA,NA,MN,USA,NAm,B,leaf,NA,NA,16.7,3.1,9.3,NA,NA,NA,NA,NA,NA,NA,NA,live
 18,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Aceraceae,Acer,Acer rubrum,T,46.7,NA,3.9,NA,NA,MN,USA,NAm,B,leaf,NA,NA,18.9,3,7.4,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -415,7 +415,7 @@ Oleksyn/Lukasiewicz,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sa
 794,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Rubiales,Rubiaceae,Aidia,Aidia ochroleuca,T,-0.17,11.35,23.5,1668.6,583,Lope-Okanda Reserve,Gabon,Af,TR,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Campanulales,Simaroubaceae,Ailanthus,Ailanthus altissima,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 653,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Simaroubaceae,Ailanthus,Ailanthus altissima,T,39.54,2.7,17,461,4,NA,Spain,E,Medi,leaf,177.8,56.2,28.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Simaroubaceae,Ailanthus,Ailanthus altissima,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Simaroubaceae,Ailanthus,Ailanthus altissima,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 240,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Simaroubaceae,Ailanthus,Ailanthus excelsa,T,NA,NA,NA,NA,NA,NA,India,Asi,TR,leaf,NA,NA,28.9,4.4,26,NA,NA,NA,NA,NA,NA,NA,NA,live
 781,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Laurales,Lauraceae,Aiouea,Aiouea impressa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 606,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Lardizabalaceae,Akebia,Akebia quinata,L,NA,NA,NA,NA,NA,NA,Poland,E,TE,leaf,93.83,106.6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -490,7 +490,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulac
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa,T,NA,NA,4.8,589,NA,NA,Estonia,E,TE,leaf,128.82,77.6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,120.06,83.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 700,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,473.26,21.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 663,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus glutinosa x A. incana,T,58.3,26.7,5.5,533,13,NA,Estonia,E,TE,leaf,NA,NA,34,3.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus hirsuta,T,NA,NA,6.8,1216,NA,NA,Japan,Asi,TE,leaf,128.82,77.6,32,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 809,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Alnus,Alnus hirsuta,T,43.75,141.33,7.3,1095.1,50,NA,Japan,Asi,TE,leaf,NA,NA,33.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -976,7 +976,7 @@ OLEKSYN/KAROLEW,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fa
 753/754,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,58.27,27.31,5.5,615.9,51,Near town of Järvselja,Estonia,E,TE,leaf,217.39,46,17.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,48,88,4.16,NA,NA,"Mountain Altai, Xinjiang",China,Asi,TR,leaf,NA,NA,20.6,1.77,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,48,88,4.16,NA,NA,"Mountain Altai, Xinjiang",China,Asi,TR,leaf,NA,NA,24,2.83,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 800,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pendula,T,50,10.08,8.6,754,160,NA,Germany,E,TE,leaf,NA,NA,21.1,1.704,5.01,NA,NA,NA,NA,NA,NA,NA,NA,live
 164,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula platyphylla,T,62,NA,-10.5,NA,NA,Yakutsk,Russia,Asi,B,leaf,NA,NA,19.9,3.8,18.3,NA,NA,NA,NA,NA,NA,NA,NA,live
 206,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula platyphylla,T,NA,NA,NA,NA,NA,NA,Russia,Asi,"Steppe,Prery,Savanna",leaf,NA,NA,26.1,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -1009,9 +1009,9 @@ Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,NA,NA,-2.3,446,NA,NA,Sweden,E,Tun/Alp,leaf,144.54,69.2,27.6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,NA,NA,4.8,589,NA,NA,Estonia,E,TE,leaf,158.49,63.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,137.53,72.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 793,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens,T,51.5,-0.3,10.4,752.1,5,Kew Bot Garden,UK,E,TE,leaf,131.82,75.9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens ssp. carpatica,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pubescens ssp. carpatica,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 439,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Urticales,Betulaceae,Betula,Betula pumila T,T,43.15,NA,8,NA,NA,WI,USA,NAm,TE,leaf,93,107.5,15.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 450,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pumila T,T,NA,NA,NA,NA,NA,Wetland N Am,NA,NA,NA,leaf,NA,NA,18.7,0.9,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 459,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Betula,Betula pumila T,T,45.88,-89.73,4.3,NA,NA,WI,USA,NAm,B,leaf,NA,NA,20.1,1.1,6.2,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -1286,7 +1286,7 @@ OLEKSYN/KAROLEW,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fa
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus betulus,T,51.09,10.52,7.5,669,290,saplings,Germany,E,TE,leaf,317,31.5,24.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus betulus,T,51.09,10.52,7.5,669,290,adult-lower_canopy,Germany,E,TE,leaf,265,37.7,26.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus betulus,T,51.09,10.52,7.5,669,290,adult-upper_canopy,Germany,E,TE,leaf,116,86.2,25.8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus betulus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus betulus,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus caroliniana,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,161,62.1,16,1.2,5.3,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus caroliniana,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,169,59.2,16,1.1,5.4,NA,NA,NA,NA,NA,NA,NA,NA,live
 145,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Betulaceae,Carpinus,Carpinus caroliniana,T,44.57,NA,6.5,NA,NA,S ONT,Canada,NAm,B,leaf,185,54.1,20,1.8,4.8,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -1398,7 +1398,7 @@ Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelida
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,NA,NA,8.7,773,NA,NA,UK,E,TE,leaf,131.83,75.9,23.8,1.426,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,116.75,85.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 700,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,235.57,42.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 826,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sativa,T,45.73,-72.08,3.4,932,NA,Quebec,Canada,NAm,B,leaf,318.43,31.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sequinii T,T,26.58,106.72,15.28,NA,NA,"Guiyang, Guizhou",China,Asi,TR,leaf,NA,NA,NA,4.14,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanea,Castanea sequinii T,T,26.58,106.72,15.28,NA,NA,"Guiyang, Guizhou",China,Asi,TR,leaf,NA,NA,NA,2.85,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -1658,7 +1658,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ra
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis lasiantha,L,NA,NA,NA,NA,NA,NA,USA,NAm,Medi,leaf,134.9,74.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 606,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis orientalis,L,NA,NA,NA,NA,NA,NA,Poland,E,TE,leaf,247.95,40.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 606,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis recta,L,NA,NA,NA,NA,NA,NA,Poland,E,TE,leaf,180.23,55.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis recta,L,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis recta,L,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 401,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis tangutica,L,38.2,NA,-2,NA,NA,alpine desert,Tadjikistan,Asi,Tun/Alp,leaf,121.65,82.2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 606,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis tangutica,L,NA,NA,NA,NA,NA,NA,Poland,E,TE,leaf,194.42,51.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis tangutica,L,NA,NA,-4.4,243,NA,NA,Tadjikistan,Asi,D,leaf,123.03,81.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -1669,7 +1669,7 @@ Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranuncul
 610,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis vitalba,L,43.63,3.87,13.9,785,NA,Camp Redon,France,E,Medi,leaf,275,36.4,32.2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis vitalba,L,NA,NA,12.9,772,NA,NA,France,E,Medi,leaf,275.42,36.3,32.2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis vitalba,L,NA,NA,11.7,1148,NA,NA,France,E,Medi,leaf,194.98,51.3,27.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis vitalba,L,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Ranunculales,Ranunculaceae,Clematis,Clematis vitalba,L,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Ericales,Clethraceae,Clethra,Clethra mexicana,T,NA,NA,15.8,1837,NA,NA,Mexico,NAm,TR,leaf,102.33,97.7,14,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 763,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Ericales,Clethraceae,Clethra,Clethra mexicana,T,19.5,-69.57,18,1617,1250,central Veracruz,Mexico,NAm,TR,leaf,109,91.7,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 763,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Ericales,Clethraceae,Clethra,Clethra mexicana,T,19.58,-97.26,16,1450,1470,central Veracruz,Mexico,NAm,TR,leaf,96,104.2,12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -2750,7 +2750,7 @@ OLEKSYN/KAROLEW,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fa
 736,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,42.48,4.17,12.4,895,960,NA,Spain,E,Medi,leaf,NA,NA,19,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 736,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,42.48,4.17,12.4,895,960,NA,Spain,E,Medi,leaf,NA,NA,25.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 736,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,42.48,4.17,12.4,895,960,NA,Spain,E,Medi,leaf,NA,NA,24.8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 793,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,51.5,-0.3,10.4,752.1,5,Kew Bot Garden,UK,E,TE,leaf,104.71,95.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 800,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Fagus,Fagus sylvatica,T,50,10.08,8.6,754,160,NA,Germany,E,TE,leaf,NA,NA,20.4,1.889,4.609,NA,NA,NA,NA,NA,NA,NA,NA,live
 811,NA,NA,NA,NA,NA,NA,Fagaceae,Fagus,Fagus sylvatica,T,51.36,-2.13,9.7,933,91,NA,UK,E,TE,leaf,NA,NA,23,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -2876,7 +2876,7 @@ Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,51.09,10.52,7.5,669,290,saplings,Germany,E,TE,leaf,395,25.3,26,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,51.09,10.52,7.5,669,290,adult-lower_canopy,Germany,E,TE,leaf,284,35.2,35,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 697,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,51.09,10.52,7.5,669,290,adult-upper_canopy,Germany,E,TE,leaf,102,98,28.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 793,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus excelsior,T,51.5,-0.3,10.4,752.1,5,Kew Bot Garden,UK,E,TE,leaf,204.16,49,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus mandschurica,T,NA,NA,6.8,1216,NA,NA,Japan,Asi,TE,leaf,138.04,72.4,24,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Scrophulariales,Oleaceae,Fraxinus,Fraxinus mandschurica,T,45.23,127.32,3.36,NA,NA,"Shangzhi, Heilongjiang",China,Asi,TE,leaf,NA,NA,22.3,1.99,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -5445,7 +5445,7 @@ NA,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagacea
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,NA,NA,8.7,773,NA,NA,UK,E,TE,leaf,134.9,74.1,25.7,1.413,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 700,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,246.61,40.6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 735,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,41.12,-3.5,8.7,1124,1124,NA,Spain,E,Medi,leaf,109.17,91.6,22.8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 800,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus petraea,T,50,10.08,8.6,754,160,NA,Germany,E,TE,leaf,NA,NA,22.4,1.889,4.81,NA,NA,NA,NA,NA,NA,NA,NA,live
 285,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus prinus,T,35.06,NA,12.2,NA,NA,NC-Coweeta,USA,NAm,TE,leaf,NA,NA,20,1.8,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 287,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Quercus,Quercus prinus,T,25.85,NA,23.2,NA,NA,NC-Coweeta,USA,NAm,TE,leaf,NA,NA,23,1.5,5.8,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -6199,7 +6199,7 @@ Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Ro
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus aucuparia,T,NA,NA,4.8,589,NA,NA,Estonia,E,TE,leaf,151.36,66.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus aucuparia,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,108.6,92.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 735,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus aucuparia,T,41.12,-3.5,8.7,1124,1124,NA,Spain,E,Medi,leaf,137.74,72.6,21.3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus aucuparia,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+Ellenberg,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus aucuparia,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus commixta,T,NA,NA,6.8,1216,NA,NA,Japan,Asi,TE,leaf,134.9,74.1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 774,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus folgneri,T,25,109,19.66,NA,NA,North Guangxi,China,Asi,NA,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 400,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rosales,Rosaceae,Sorbus,Sorbus intermedia,T,58.5,NA,5.5,NA,NA,NA,Estonia,E,TE,leaf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
@@ -6970,74 +6970,74 @@ Lukasiewicz(unpbl.),Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelida
 683,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Violales,Flacourtiaceae,Zuelania,Zuelania guidonia,T,NA,NA,26.2,2606,NA,NA,Panama,SAm,TR,leaf,NA,NA,19.9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 824,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Violales,Flacourtiaceae,Zuelania,Zuelania guidonia,T,NA,NA,NA,NA,NA,NA,NA,NA,NA,leaf,75.35,132.7,24.6,1.067,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
 646,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Zygia,Zygia racemosa,T,4,-53,25,3000,NA,NA,French Guiana,SAm,TR,leaf,NA,NA,29.7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,live
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Arecidae,Arecales,Arecaceae,Calamus,Calamus_nambariensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.6,0.512,2.419,0.242,463.7,1.01,NA,38.76,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.3,0.871,5.076,2.429,454.3,4.36,NA,38.47,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,7,0.238,14.256,1.138,463.8,1.39,NA,40.55,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.8,0.208,13.331,0.081,469.8,0.63,NA,50.35,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6,0.413,17.119,0.989,446.7,4.12,NA,46.35,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.9,1.78,3.775,1.538,471.8,0.53,NA,31.39,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.1,0.642,0.853,0.481,452.8,0.39,NA,20.61,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,4.2,0.706,2.84,0.461,470.9,0.31,NA,28.71,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,1.9,0.255,6.059,0.614,466.7,0.51,NA,33.81,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Commelinidae,Cyperales,Poaceae,Thyrsostachys,Thyrsostachys_siamensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,4,1.259,0.63,0.312,460.2,0.61,NA,32.14,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Arecidae,Arecales,Arecaceae,Calamus,Calamus_nambariensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.9,0.353,2.636,0.271,464.3,1.15,NA,35.4,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.1,0.751,4.631,1.682,452.3,4.24,NA,51.45,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.8,0.31,13.534,1.161,457.6,1.42,NA,68.94,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.3,0.258,8.321,0.068,467.2,0.65,NA,39.49,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.5,0.311,11.283,0.508,444.5,4.55,NA,32.32,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.8,2.354,7.486,2.52,464.5,0.58,NA,38.25,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.2,0.602,0.822,0.454,453,2.73,NA,37.77,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.4,0.772,6.924,0.628,461.2,1.1,NA,40.68,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.5,0.293,6.597,1.08,462.7,0.51,NA,47.07,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Commelinidae,Cyperales,Poaceae,Thyrsostachys,Thyrsostachys_siamensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.9,0.454,0.463,0.448,472.8,0.74,NA,33.56,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,12.8,1.073,18.053,7.016,454,1.52,NA,57.35,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,13.4,0.414,32.276,2.227,438.6,6.05,NA,47.41,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,5.1,0.137,41.317,0.193,447.2,1.33,NA,54.21,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,6.3,0.482,18.541,1.105,434.3,7.68,NA,50.16,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,4.5,1.455,31.774,1.659,443.2,4.44,NA,48.1,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,6.4,1.162,8.622,1.336,429.3,0.33,NA,36.59,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,5.9,0.702,11.969,1.15,441.3,0.16,NA,33.32,NA,NA,NA,
-Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,3.9,0.495,18.928,3.173,427.3,0.68,NA,30.24,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Urticales,Moraceae,Antiaris,Antiaris_toxicaria,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,94,NA,16.79,0.59,25.47,2.78,407,NA,2.41,14,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Baccaurea,Baccaurea_ramiflora,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,123,NA,9.37,1.92,35.17,3.07,380,NA,2.09,6.64,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Lecythidales,Lecythidaceae,Barringtonia,Barringtonia_macrostachya,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,119,NA,14.84,1.87,11.43,4.21,478,NA,4.28,16.37,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_aurea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,105,NA,15.1,0.8,26.93,2.91,470,NA,3.67,22.98,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Bridelia,Bridelia_stipularis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,110,NA,10.07,0.83,44.94,3.98,435,NA,0.99,17.41,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Byttneria,Byttneria_aspera_grandifolia,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,173,NA,11.4,0.42,10.31,3.97,441,NA,4.9,23.75,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_echinocarpa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,84,NA,12.4,0.22,2.95,0.72,502,NA,5.52,16.29,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_fleuryi,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,81,NA,12.63,0.28,3.81,1.03,502,NA,6.75,13.98,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_mekongensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,88,NA,11.88,0.28,3.43,1.25,487,NA,9.14,18.59,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Celastrales,Celastraceae,Celastrus,Celastrus_sp2,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,112,NA,11.75,0.44,37.77,7.35,452,NA,6.6,19.98,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Celastrales,Celastraceae,Celastrus,Celastrus_paniculatus,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,94,NA,8.4,0.78,39.77,5.3,456,NA,8.01,14.53,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Urticales,Ulmaceae,Celtis,Celtis_philippensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,53,NA,11.35,0.48,71.24,2.61,335,NA,1.08,6.88,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Laurales,Lauraceae,Cinnamomum,Cinnamomum_bejolghota,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,92,NA,10.77,1.07,10.21,0.93,486,NA,1.81,16.87,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Cleistanthus,Cleistanthus_sumatranus,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,117,NA,10.7,0.88,15.49,1.63,441,NA,4.12,12.17,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Combretum,Combretum_latifolium,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,178,NA,14.87,0.94,18.74,3,445,NA,8.14,6.27,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Craspedolobium,Craspedolobium_unijugum,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,178,NA,11.33,2.48,26.62,0.42,453,NA,0.94,15.24,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Cratoxylum,Cratoxylum_cochinchinense,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,194,NA,19.68,0.47,2.9,1.34,494,NA,3.79,4.85,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_stipulacea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,208,NA,19.78,0.52,19,1.45,482,NA,2.26,17.62,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Gmelina,Gmelina_arborea,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,90,NA,9.77,0.86,13.89,1.63,481,NA,3.91,6.05,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Gnetum,Gnetum_montanum,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,112,NA,30.27,1.41,14.49,2.22,504,NA,1.47,10.95,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Harpullia,Harpullia_cupanoides,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,164,NA,14.46,0.92,18.54,6.49,460,NA,3.49,11.38,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Hodgsonia,Hodgsonia_macrocarpa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,124,NA,16.24,1.96,45.38,1.03,406,NA,1.46,10.02,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Lasiococca,Lasiococca_comberi,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,122,NA,12.09,0.44,26.2,1.68,410,NA,8.68,6.47,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Millettia,Millettia_leptobotrya,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,148,NA,18.43,0.46,9.98,1.24,401,NA,1.89,7.31,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Millettia,Millettia_pachycarpa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,185,NA,17.61,1.22,22.77,1.33,422,NA,1.44,9.79,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Magnoliales,Annonaceae,Polyalthia,Polyalthia_simiarum,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,165,NA,16.49,1.02,21.73,2.42,454,NA,4.01,14.34,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Pometia,Pometia_tomentosa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,107,NA,11.54,1.53,18.4,1.76,477,NA,7.75,27.87,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Pristimera,Pristimera_arborea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,174,NA,12.12,0.93,59.83,3.52,374,NA,0.98,5.34,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Combretum,Combretum_griffithii,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,156,NA,16.26,0.88,22.47,2.91,462,NA,11.27,12.71,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Theales,Theaceae,Schima,Schima_wallichii,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,109,NA,10.73,0.34,9.25,3.36,492,NA,6.88,27.66,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Anacardiaceae,Semecarpus,Semecarpus_reticulata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,98,NA,9.25,0.45,29.84,3.55,408,NA,1.52,8.59,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Liliidae,Liliales,Smilacaceae,Smilax,Smilax_hypoglauca,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,169,NA,13.37,0.53,8.05,1.93,511,NA,6.38,19.56,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Spatholobus,Spatholobus_pulcher,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,146,NA,15.87,0.42,4.85,0.94,448,NA,2.62,21.13,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Terminalia,Terminalia_myriocarpa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,81,NA,14.65,1.43,18.74,1.92,483,NA,9.67,28.64,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrameles,Tetrameles_nudiflorum,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,104,NA,12.14,0.92,31.23,3,484,NA,0.83,21.95,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_sp,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,114,NA,13.07,1,27.35,5.78,459,NA,5.91,9.43,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_obovata,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,209,NA,15.32,2.12,33.23,6.97,461,NA,1.53,13.76,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Tinomiscium,Tinomiscium_petiolare,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,161,NA,28.11,0.84,23.42,4.26,471,NA,0.92,12.02,NA,NA,NA,
-Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Urceola,Urceola_tournieri,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,198,NA,14.16,0.62,12.47,4.26,483,NA,7.44,33.52,NA,NA,NA,
-Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Rhamnaceae,Ventilago,Ventilago_denticulata,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,188,NA,9.93,0.71,49.47,1.25,429,NA,8.17,13.96,NA,NA,NA,
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Arecidae,Arecales,Arecaceae,Calamus,Calamus_nambariensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.6,0.512,2.419,0.242,463.7,1.01,NA,38.76,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.3,0.871,5.076,2.429,454.3,4.36,NA,38.47,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,7,0.238,14.256,1.138,463.8,1.39,NA,40.55,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.8,0.208,13.331,0.081,469.8,0.63,NA,50.35,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6,0.413,17.119,0.989,446.7,4.12,NA,46.35,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.9,1.78,3.775,1.538,471.8,0.53,NA,31.39,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.1,0.642,0.853,0.481,452.8,0.39,NA,20.61,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,4.2,0.706,2.84,0.461,470.9,0.31,NA,28.71,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,1.9,0.255,6.059,0.614,466.7,0.51,NA,33.81,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Commelinidae,Cyperales,Poaceae,Thyrsostachys,Thyrsostachys_siamensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,4,1.259,0.63,0.312,460.2,0.61,NA,32.14,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Arecidae,Arecales,Arecaceae,Calamus,Calamus_nambariensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.9,0.353,2.636,0.271,464.3,1.15,NA,35.4,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.1,0.751,4.631,1.682,452.3,4.24,NA,51.45,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,6.8,0.31,13.534,1.161,457.6,1.42,NA,68.94,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.3,0.258,8.321,0.068,467.2,0.65,NA,39.49,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.5,0.311,11.283,0.508,444.5,4.55,NA,32.32,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.8,2.354,7.486,2.52,464.5,0.58,NA,38.25,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.2,0.602,0.822,0.454,453,2.73,NA,37.77,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,5.4,0.772,6.924,0.628,461.2,1.1,NA,40.68,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,2.5,0.293,6.597,1.08,462.7,0.51,NA,47.07,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Commelinidae,Cyperales,Poaceae,Thyrsostachys,Thyrsostachys_siamensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,wood,NA,NA,3.9,0.454,0.463,0.448,472.8,0.74,NA,33.56,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_planicaule,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,12.8,1.073,18.053,7.016,454,1.52,NA,57.35,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_rimosa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,13.4,0.414,32.276,2.227,438.6,6.05,NA,47.41,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Lamiidae,Apocynales,Apocynaceae,Ecdysanthera,Ecdysanthera_rosea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,5.1,0.137,41.317,0.193,447.2,1.33,NA,54.21,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_touranensis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,6.3,0.482,18.541,1.105,434.3,7.68,NA,50.16,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Rosopsida,Dilleniidae,Urticales,Moraceae,Ficus,Ficus_altissima,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,4.5,1.455,31.774,1.659,443.2,4.44,NA,48.1,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Piperales,Piperaceae,Piper,Piper_umbellata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,6.4,1.162,8.622,1.336,429.3,0.33,NA,36.59,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Malvales,Malvaceae,Kleinhovia,Kleinhovia_hospita,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,5.9,0.702,11.969,1.15,441.3,0.16,NA,33.32,NA,NA,NA,live
+Dossa_et_unpl,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona_grandis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,bark,NA,NA,3.9,0.495,18.928,3.173,427.3,0.68,NA,30.24,NA,NA,NA,live
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Urticales,Moraceae,Antiaris,Antiaris_toxicaria,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,94,NA,16.79,0.59,25.47,2.78,407,NA,2.41,14,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Baccaurea,Baccaurea_ramiflora,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,123,NA,9.37,1.92,35.17,3.07,380,NA,2.09,6.64,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Lecythidales,Lecythidaceae,Barringtonia,Barringtonia_macrostachya,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,119,NA,14.84,1.87,11.43,4.21,478,NA,4.28,16.37,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Bauhinia,Bauhinia_aurea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,105,NA,15.1,0.8,26.93,2.91,470,NA,3.67,22.98,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Bridelia,Bridelia_stipularis,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,110,NA,10.07,0.83,44.94,3.98,435,NA,0.99,17.41,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Byttneria,Byttneria_aspera_grandifolia,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,173,NA,11.4,0.42,10.31,3.97,441,NA,4.9,23.75,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_echinocarpa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,84,NA,12.4,0.22,2.95,0.72,502,NA,5.52,16.29,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_fleuryi,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,81,NA,12.63,0.28,3.81,1.03,502,NA,6.75,13.98,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Fagales,Fagaceae,Castanopsis,Castanopsis_mekongensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,88,NA,11.88,0.28,3.43,1.25,487,NA,9.14,18.59,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Celastrales,Celastraceae,Celastrus,Celastrus_sp2,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,112,NA,11.75,0.44,37.77,7.35,452,NA,6.6,19.98,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Celastrales,Celastraceae,Celastrus,Celastrus_paniculatus,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,94,NA,8.4,0.78,39.77,5.3,456,NA,8.01,14.53,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Hamamelidae,Urticales,Ulmaceae,Celtis,Celtis_philippensis,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,53,NA,11.35,0.48,71.24,2.61,335,NA,1.08,6.88,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Laurales,Lauraceae,Cinnamomum,Cinnamomum_bejolghota,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,92,NA,10.77,1.07,10.21,0.93,486,NA,1.81,16.87,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Euphorbiales,Euphorbiaceae,Cleistanthus,Cleistanthus_sumatranus,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,117,NA,10.7,0.88,15.49,1.63,441,NA,4.12,12.17,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Combretum,Combretum_latifolium,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,178,NA,14.87,0.94,18.74,3,445,NA,8.14,6.27,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Craspedolobium,Craspedolobium_unijugum,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,178,NA,11.33,2.48,26.62,0.42,453,NA,0.94,15.24,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Cratoxylum,Cratoxylum_cochinchinense,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,194,NA,19.68,0.47,2.9,1.34,494,NA,3.79,4.85,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Fabales,Fabaceae,Dalbergia,Dalbergia_stipulacea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,208,NA,19.78,0.52,19,1.45,482,NA,2.26,17.62,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Gmelina,Gmelina_arborea,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,90,NA,9.77,0.86,13.89,1.63,481,NA,3.91,6.05,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Gnetum,Gnetum_montanum,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,112,NA,30.27,1.41,14.49,2.22,504,NA,1.47,10.95,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Harpullia,Harpullia_cupanoides,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,164,NA,14.46,0.92,18.54,6.49,460,NA,3.49,11.38,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Hodgsonia,Hodgsonia_macrocarpa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,124,NA,16.24,1.96,45.38,1.03,406,NA,1.46,10.02,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Lasiococca,Lasiococca_comberi,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,122,NA,12.09,0.44,26.2,1.68,410,NA,8.68,6.47,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Millettia,Millettia_leptobotrya,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,148,NA,18.43,0.46,9.98,1.24,401,NA,1.89,7.31,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Millettia,Millettia_pachycarpa,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,185,NA,17.61,1.22,22.77,1.33,422,NA,1.44,9.79,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Magnoliidae,Magnoliales,Annonaceae,Polyalthia,Polyalthia_simiarum,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,165,NA,16.49,1.02,21.73,2.42,454,NA,4.01,14.34,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Pometia,Pometia_tomentosa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,107,NA,11.54,1.53,18.4,1.76,477,NA,7.75,27.87,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Pristimera,Pristimera_arborea,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,174,NA,12.12,0.93,59.83,3.52,374,NA,0.98,5.34,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Combretum,Combretum_griffithii,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,156,NA,16.26,0.88,22.47,2.91,462,NA,11.27,12.71,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Theales,Theaceae,Schima,Schima_wallichii,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,109,NA,10.73,0.34,9.25,3.36,492,NA,6.88,27.66,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Anacardiaceae,Semecarpus,Semecarpus_reticulata,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,98,NA,9.25,0.45,29.84,3.55,408,NA,1.52,8.59,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Liliopsida,Liliidae,Liliales,Smilacaceae,Smilax,Smilax_hypoglauca,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,169,NA,13.37,0.53,8.05,1.93,511,NA,6.38,19.56,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Spatholobus,Spatholobus_pulcher,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,146,NA,15.87,0.42,4.85,0.94,448,NA,2.62,21.13,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Myrtales,Combretaceae,Terminalia,Terminalia_myriocarpa,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,81,NA,14.65,1.43,18.74,1.92,483,NA,9.67,28.64,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrameles,Tetrameles_nudiflorum,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,104,NA,12.14,0.92,31.23,3,484,NA,0.83,21.95,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_sp,T,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,114,NA,13.07,1,27.35,5.78,459,NA,5.91,9.43,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Vitaceae,Tetrastigma,Tetrastigma_obovata,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,209,NA,15.32,2.12,33.23,6.97,461,NA,1.53,13.76,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Tinomiscium,Tinomiscium_petiolare,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,161,NA,28.11,0.84,23.42,4.26,471,NA,0.92,12.02,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,NA,NA,NA,NA,NA,NA,Urceola,Urceola_tournieri,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,198,NA,14.16,0.62,12.47,4.26,483,NA,7.44,33.52,NA,NA,NA,senesced
+Roeder_et_al_2022,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Rhamnales,Rhamnaceae,Ventilago,Ventilago_denticulata,L,NA,NA,NA,NA,NA,NA,China,Asi,TR,leaf,188,NA,9.93,0.71,49.47,1.25,429,NA,8.17,13.96,NA,NA,NA,senesced
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Dilleniidae,Violales,Achariaceae,Lindackeria,Lindackeria laurina,T,NA,NA,NA,NA,NA,P06,Panama,SAm,TR,wood,NA,NA,5.333333,0.17166667,2.5151333,1.246042,NA,NA,NA,NA,NA,NA,NA,live
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Dipsacales,Adoxaceae,Viburnum,Viburnum costaricanum,T,NA,NA,NA,NA,NA,ChorroA,Panama,SAm,TR,wood,NA,NA,1.8,0.084,0.777,0.665,NA,NA,NA,NA,NA,NA,NA,live
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sapindales,Anacardiaceae,Mangifera,Mangifera indica,T,NA,NA,NA,NA,NA,P13,Panama,SAm,TR,wood,NA,NA,1.55,0.4065,5.8658,1.3180712,NA,NA,NA,NA,NA,NA,NA,live
@@ -7179,10 +7179,10 @@ Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Sa
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Polygalales,Vochysiaceae,Vochysia,Vochysia ferruginea,T,NA,NA,NA,NA,NA,P06,Panama,SAm,TR,wood,NA,NA,2.1,0.0505,0.8685,0.5505258,NA,NA,NA,NA,NA,NA,NA,live
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Polygalales,Vochysiaceae,Vochysia,Vochysia guatemalensis,T,NA,NA,NA,NA,NA,HondaA,Panama,SAm,TR,wood,NA,NA,1.533333,0.02133333,0.308,0.17033333,NA,NA,NA,NA,NA,NA,NA,live
 Heineman_et_al_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Rosidae,Polygalales,Vochysiaceae,Vochysia,Vochysia guatemalensis,T,NA,NA,NA,NA,NA,Samudio,Panama,SAm,TR,wood,NA,NA,1.566667,0.01807,0.3826667,0.186,NA,NA,NA,NA,NA,NA,NA,live
-Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,L,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,89,NA,NA,0.41,10.4,NA,464,NA,NA,17,19.6,NA,NA,
-Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,123,NA,NA,0.35,6.7,NA,413,NA,NA,23.1,32.9,NA,NA,
-Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,65,NA,NA,0.25,12.1,NA,473,NA,NA,16.6,18.4,NA,NA,
-Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,186,NA,NA,0.66,26,NA,415,NA,NA,13.6,17.6,NA,NA,
+Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,L,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,89,NA,NA,0.41,10.4,NA,464,NA,NA,17,19.6,NA,NA,senesced
+Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,123,NA,NA,0.35,6.7,NA,413,NA,NA,23.1,32.9,NA,NA,senesced
+Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,65,NA,NA,0.25,12.1,NA,473,NA,NA,16.6,18.4,NA,NA,senesced
+Santiago_2010,NA,NA,NA,NA,NA,NA,NA,NA,NA,T,NA,NA,NA,NA,NA,San Lorenzo,Panama,SAm,TR,leaf,186,NA,NA,0.66,26,NA,415,NA,NA,13.6,17.6,NA,NA,senesced
 Dossa_et_el_2016,Plantae,NA,NA,NA,NA,NA,Cupressaceae,Cunninghamia,Cunninghamia lanceolata,T,NA,NA,NA,NA,NA,Menglun,China,Asi,TR,bark,NA,NA,7.03,0.87,NA,NA,497,NA,1.4,42.9,20.17,6.36,NA,live
 Dossa_et_el_2016,Plantae,NA,NA,NA,NA,NA,Cupressaceae,Cunninghamia,Cunninghamia lanceolata,T,NA,NA,NA,NA,NA,Menglun,China,Asi,TR,wood,NA,NA,1.77,0.15,NA,NA,511,NA,NA,34.19,40.25,10.73,69.32,live
 Dossa_et_el_2016,Plantae,Tracheobionta,Magnoliophyta,Magnoliopsida,Asteridae,Lamiales,Lamiaceae,Tectona,Tectona grandis,T,NA,NA,NA,NA,NA,Menglun,China,Asi,TR,bark,NA,NA,4.18,0.21,NA,NA,441,NA,0.44,20.47,36.52,21.26,NA,live
