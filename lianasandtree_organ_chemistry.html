@@ -1582,8 +1582,8 @@ border-radius: 0px;
 <h1 class="title toc-ignore">Liana and tree tissues chemistry</h1>
 <h4 class="author"><a href="https://scholar.google.com/citations?user=w20AkZcAAAAJ&amp;hl=en"><strong><em>Gbadamassi
 G.O. Dossa</em></strong></a></h4>
-<h4 class="date">(Created on Jan 3 2022 and last updated on Fri Mar 31
-2023 23:30:13)</h4>
+<h4 class="date">(Created on Jan 3 2022 and last updated on Mon Nov 06
+2023 12:12:47)</h4>
 
 </div>
 
@@ -1591,9 +1591,9 @@ G.O. Dossa</em></strong></a></h4>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
 <p>Here, we are reporting the differences in chemical content of
-different tissues of lianas and not lianas (self-supporting
+different tissues/organs from lianas and not lianas (self-supporting
 trees).<br />
-This chemistry here is the initial quality of both wood and bark of fie
+This chemistry here is the initial quality of both wood and bark of five
 species of lianas and five species of trees with a dbh of 2.5 cm on
 average. We used logs from those ten species to set up an experiment in
 the secondary rainforest of XTBG in December 2021.</p>
@@ -1634,18 +1634,16 @@ data</h1>
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ini_chem)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 12
-##   ID    Species   growt…¹ Tissue Posit…² C_per…³ N_per…⁴ P_per…⁵ Mg_pe…⁶ Ca_pe…⁷
-##   &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-## 1 1_A6  Calamus_… liana   wood   suspen…    46.4    0.26  0.0512  0.0242   0.242
-## 2 2_B5  Tetrasti… liana   wood   suspen…    45.4    0.63  0.0871  0.243    0.508
-## 3 3_C4  Dalbergi… liana   wood   suspen…    46.4    0.7   0.0238  0.114    1.43 
-## 4 4_D4  Ecdysant… liana   wood   suspen…    47.0    0.38  0.0208  0.0081   1.33 
-## 5 5_E4  Bauhinia… liana   wood   suspen…    44.7    0.6   0.0413  0.0989   1.71 
-## 6 6_F6  Ficus_al… tree    wood   suspen…    47.2    0.29  0.178   0.154    0.378
-## # … with 2 more variables: Lignin_percent &lt;dbl&gt;,
-## #   Condensed_tannin_percent &lt;dbl&gt;, and abbreviated variable names
-## #   ¹​growth_form, ²​Position, ³​C_percent, ⁴​N_percent, ⁵​P_percent, ⁶​Mg_percent,
-## #   ⁷​Ca_percent</code></pre>
+##   ID    Species        growth_form Tissue Position C_percent N_percent P_percent
+##   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 1_A6  Calamus_namba… liana       wood   suspend…      46.4      0.26    0.0512
+## 2 2_B5  Tetrastigma_p… liana       wood   suspend…      45.4      0.63    0.0871
+## 3 3_C4  Dalbergia_rim… liana       wood   suspend…      46.4      0.7     0.0238
+## 4 4_D4  Ecdysanthera_… liana       wood   suspend…      47.0      0.38    0.0208
+## 5 5_E4  Bauhinia_tour… liana       wood   suspend…      44.7      0.6     0.0413
+## 6 6_F6  Ficus_altissi… tree        wood   suspend…      47.2      0.29    0.178 
+## # ℹ 4 more variables: Mg_percent &lt;dbl&gt;, Ca_percent &lt;dbl&gt;, Lignin_percent &lt;dbl&gt;,
+## #   Condensed_tannin_percent &lt;dbl&gt;</code></pre>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ini_chem)</span></code></pre></div>
 <pre><code>##       ID              Species          growth_form           Tissue         
 ##  Length:30          Length:30          Length:30          Length:30         
@@ -1692,29 +1690,29 @@ traits average per tissue</h2>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ini_chem_tissue</span></code></pre></div>
 <pre><code>## # A tibble: 20 × 10
 ## # Groups:   Species, growth_form [12]
-##    Species   growt…¹ Tissue mean_C mean_N mean_P mean_Mg mean_Ca mean_…² mean_…³
-##    &lt;fct&gt;     &lt;fct&gt;   &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Bauhinia… liana   bark     43.4  0.63  0.0482 0.110    1.85      50.2   7.68 
-##  2 Bauhinia… liana   wood     44.6  0.575 0.0362 0.0748   1.42      39.3   4.34 
-##  3 Calamus_… liana   wood     46.4  0.275 0.0432 0.0256   0.253     37.1   1.08 
-##  4 Dalbergi… liana   bark     43.9  1.34  0.0414 0.223    3.23      47.4   6.05 
-##  5 Dalbergi… liana   wood     46.1  0.69  0.0274 0.115    1.39      54.7   1.40 
-##  6 Ecdysant… liana   bark     44.7  0.51  0.0137 0.0193   4.13      54.2   1.33 
-##  7 Ecdysant… liana   wood     46.8  0.355 0.0233 0.00745  1.08      44.9   0.64 
-##  8 Ficus_al… tree    bark     44.3  0.45  0.146  0.166    3.18      48.1   4.44 
-##  9 Ficus_al… tree    wood     46.8  0.285 0.207  0.203    0.563     34.8   0.555
-## 10 Kleinhov… tree    bark     44.1  0.59  0.0702 0.115    1.20      33.3   0.16 
-## 11 Kleinhov… tree    wood     46.6  0.48  0.0739 0.0544   0.488     34.7   0.705
-## 12 liana     liana   leaves   45.7  1.56  0.0888 0.315    2.64      15.6   4.14 
-## 13 Piper_um… tree    bark     42.9  0.64  0.116  0.134    0.862     36.6   0.33 
-## 14 Piper_um… tree    wood     45.3  0.515 0.0622 0.0468   0.0837    29.2   1.56 
-## 15 Tectona_… tree    bark     42.7  0.39  0.0495 0.317    1.89      30.2   0.68 
-## 16 Tectona_… tree    wood     46.5  0.22  0.0274 0.0847   0.633     40.4   0.51 
-## 17 Tetrasti… liana   bark     45.4  1.28  0.107  0.702    1.81      57.4   1.52 
-## 18 Tetrasti… liana   wood     45.3  0.62  0.0811 0.206    0.485     45.0   4.3  
-## 19 Thyrsost… tree    wood     46.7  0.395 0.0856 0.038    0.0546    32.8   0.675
-## 20 tree      tree    leaves   45    1.26  0.0926 0.242    2         14.2   4.59 
-## # … with abbreviated variable names ¹​growth_form, ²​mean_Lignin, ³​mean_Tannin</code></pre>
+##    Species   growth_form Tissue mean_C mean_N mean_P mean_Mg mean_Ca mean_Lignin
+##    &lt;fct&gt;     &lt;fct&gt;       &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+##  1 Bauhinia… liana       bark     43.4  0.63  0.0482 0.110    1.85          50.2
+##  2 Bauhinia… liana       wood     44.6  0.575 0.0362 0.0748   1.42          39.3
+##  3 Calamus_… liana       wood     46.4  0.275 0.0432 0.0256   0.253         37.1
+##  4 Dalbergi… liana       bark     43.9  1.34  0.0414 0.223    3.23          47.4
+##  5 Dalbergi… liana       wood     46.1  0.69  0.0274 0.115    1.39          54.7
+##  6 Ecdysant… liana       bark     44.7  0.51  0.0137 0.0193   4.13          54.2
+##  7 Ecdysant… liana       wood     46.8  0.355 0.0233 0.00745  1.08          44.9
+##  8 Ficus_al… tree        bark     44.3  0.45  0.146  0.166    3.18          48.1
+##  9 Ficus_al… tree        wood     46.8  0.285 0.207  0.203    0.563         34.8
+## 10 Kleinhov… tree        bark     44.1  0.59  0.0702 0.115    1.20          33.3
+## 11 Kleinhov… tree        wood     46.6  0.48  0.0739 0.0544   0.488         34.7
+## 12 liana     liana       leaves   45.7  1.56  0.0888 0.315    2.64          15.6
+## 13 Piper_um… tree        bark     42.9  0.64  0.116  0.134    0.862         36.6
+## 14 Piper_um… tree        wood     45.3  0.515 0.0622 0.0468   0.0837        29.2
+## 15 Tectona_… tree        bark     42.7  0.39  0.0495 0.317    1.89          30.2
+## 16 Tectona_… tree        wood     46.5  0.22  0.0274 0.0847   0.633         40.4
+## 17 Tetrasti… liana       bark     45.4  1.28  0.107  0.702    1.81          57.4
+## 18 Tetrasti… liana       wood     45.3  0.62  0.0811 0.206    0.485         45.0
+## 19 Thyrsost… tree        wood     46.7  0.395 0.0856 0.038    0.0546        32.8
+## 20 tree      tree        leaves   45    1.26  0.0926 0.242    2             14.2
+## # ℹ 1 more variable: mean_Tannin &lt;dbl&gt;</code></pre>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ini_chem_tissue2<span class="ot">&lt;-</span>ini_chem<span class="sc">%&gt;%</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(growth_form, Tissue)<span class="sc">%&gt;%</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_C=</span><span class="fu">mean</span>(C_percent, <span class="at">na.rm=</span>T),</span>
@@ -1730,15 +1728,15 @@ traits average per tissue</h2>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ini_chem_tissue2</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 9
 ## # Groups:   growth_form [2]
-##   growth_form Tissue mean_C mean_N mean_P mean_Mg mean_Ca mean_Lignin mean_Tan…¹
-##   &lt;fct&gt;       &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
-## 1 liana       bark     44.4  0.94  0.0526  0.264    2.75         52.3      4.14 
-## 2 liana       leaves   45.7  1.56  0.0888  0.315    2.64         15.6      4.14 
-## 3 liana       wood     45.8  0.503 0.0422  0.0857   0.926        44.2      2.35 
-## 4 tree        bark     43.5  0.518 0.0953  0.183    1.78         37.1      1.40 
-## 5 tree        leaves   45    1.26  0.0926  0.242    2            14.2      4.59 
-## 6 tree        wood     46.4  0.379 0.0912  0.0854   0.364        34.4      0.801
-## # … with abbreviated variable name ¹​mean_Tannin</code></pre>
+##   growth_form Tissue mean_C mean_N mean_P mean_Mg mean_Ca mean_Lignin
+##   &lt;fct&gt;       &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+## 1 liana       bark     44.4  0.94  0.0526  0.264    2.75         52.3
+## 2 liana       leaves   45.7  1.56  0.0888  0.315    2.64         15.6
+## 3 liana       wood     45.8  0.503 0.0422  0.0857   0.926        44.2
+## 4 tree        bark     43.5  0.518 0.0953  0.183    1.78         37.1
+## 5 tree        leaves   45    1.26  0.0926  0.242    2            14.2
+## 6 tree        wood     46.4  0.379 0.0912  0.0854   0.364        34.4
+## # ℹ 1 more variable: mean_Tannin &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <div id="update-calculation-and-calculations-of-means-and-sd-with-new-data-from-articles" class="section level1" number="3">
@@ -1747,14 +1745,16 @@ calculations of means and SD with new data from articles</h1>
 <p>After the manuscript got reject with permission to resubmit at
 “Frontiers in Forest and Global Change”, Dossa contacted Wyka who agreed
 to collaborate with his colleague. Thus, they provided a database of 10
-000 entries of data comparing trees, lianas, and shrubs. Moreover, we
-have added few more articles data (we found in the literature): Li et al
-2013, Scowcroft 1997, Heineman et al 2016, Dossa et al 2016, Jones et al
-2019, Jones et al 2020, Dossa et al 2020. Moreover, we go the initial
-raw data from Roeder et al 2022, and finally unpublished data from
-Dossa. Now, we are able to compute the mean and standard error of the
-following traits: Nitrogen (N), Phosphorus (P), Calcium (Ca), Magnesium
-(Mg), Carbon (C), Tannins (condensed and water soluble), and Lignin.</p>
+000 entries of data comparing trees, lianas, and shrubs (live leaves).
+Moreover, we have added few more articles data (we found in the
+literature): Santiago 2010 (senesced leaves), Li et al 2013, Scowcroft
+1997 (senesced leaves), Heineman et al 2016, Dossa et al 2016, Jones et
+al 2019, Jones et al 2020, Dossa et al 2020. Moreover, we go the initial
+raw data from Roeder et al 2022 (senesced leaves), and finally
+unpublished data from Dossa. Now, we are able to compute the mean and
+standard error of the following traits: Nitrogen (N), Phosphorus (P),
+Calcium (Ca), Magnesium (Mg), Carbon (C), Tannins (condensed and water
+soluble), and Lignin.</p>
 <div id="input-file" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Input file</h2>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>litterquality<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">&quot;Liana_perspective_datab.csv&quot;</span>,</span>
@@ -1791,7 +1791,8 @@ following traits: Nitrogen (N), Phosphorus (P), Calcium (Ca), Magnesium
 <span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lignin =</span> <span class="fu">col_double</span>(),</span>
 <span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">Cellulose_percent =</span> <span class="fu">col_double</span>(),</span>
 <span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">Hemicellulose_percent =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">Fiber_content_percent =</span> <span class="fu">col_double</span>()))</span></code></pre></div>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">Fiber_content_percent =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tissue_status=</span> <span class="fu">col_character</span>()))</span></code></pre></div>
 <pre><code>## Warning: The following named parsers don&#39;t match the column names: Life Form</code></pre>
 </div>
 <div id="compute-chemical-traits-average-per-tissue-1" class="section level2" number="3.2">
@@ -1799,7 +1800,7 @@ following traits: Nitrogen (N), Phosphorus (P), Calcium (Ca), Magnesium
 traits average per tissue</h2>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
 <pre><code>## Rows: 7,256
-## Columns: 34
+## Columns: 35
 ## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
 ## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
 ## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
@@ -1833,7 +1834,8 @@ traits average per tissue</h2>
 ## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>litterquality_avg<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Life_form=</span><span class="st">`</span><span class="at">Life_form</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Life_form=</span><span class="fu">as.factor</span>(Life_form),</span>
@@ -1874,24 +1876,23 @@ traits average per tissue</h2>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>litterquality_avg</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 23
 ## # Groups:   Tissue [3]
-##   Tissue Life_f…¹ mean_…² SD_SLA mean_…³ SD_LMA mean_C  SD_C mean_N  SD_N mean_P
-##   &lt;fct&gt;  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
-## 1 bark   L           NaN    NA     NaN     NA     444.  8.81   9.4   4.31  0.526
-## 2 bark   T           NaN    NA     NaN     NA     453. 19.7   12.0  16.2   0.585
-## 3 leaf   L           188.  106.     71.5   49.4   437. 63.1   23.1   9.57  1.63 
-## 4 leaf   T           125.   69.4   112.   121.    434. 55.2   19.4   7.19  1.35 
-## 5 wood   L           NaN    NA     NaN     NA     458.  8.72   5.03  1.70  0.422
-## 6 wood   T           NaN    NA     NaN     NA     468. 15.5    3.03  2.82  0.183
-## # … with 12 more variables: SD_P &lt;dbl&gt;, mean_Mg &lt;dbl&gt;, SD_Mg &lt;dbl&gt;,
+##   Tissue Life_form mean_SLA SD_SLA mean_LMA SD_LMA mean_C  SD_C mean_N  SD_N
+##   &lt;fct&gt;  &lt;fct&gt;        &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 bark   L             NaN    NA      NaN     NA     444.  8.81   9.4   4.31
+## 2 bark   T             NaN    NA      NaN     NA     453. 19.7   12.0  16.2 
+## 3 leaf   L             188.  106.      71.5   49.4   437. 63.1   23.1   9.57
+## 4 leaf   T             125.   69.4    112.   121.    434. 55.2   19.4   7.19
+## 5 wood   L             NaN    NA      NaN     NA     458.  8.72   5.03  1.70
+## 6 wood   T             NaN    NA      NaN     NA     468. 15.5    3.03  2.82
+## # ℹ 13 more variables: mean_P &lt;dbl&gt;, SD_P &lt;dbl&gt;, mean_Mg &lt;dbl&gt;, SD_Mg &lt;dbl&gt;,
 ## #   mean_Ca &lt;dbl&gt;, SD_Ca &lt;dbl&gt;, mean_Lignin &lt;dbl&gt;, SD_Lignin &lt;dbl&gt;,
 ## #   mean_Tannins_wat &lt;dbl&gt;, SD_Tannin_wat &lt;dbl&gt;, mean_Tannin_cond &lt;dbl&gt;,
-## #   SD_Tannin_cond &lt;dbl&gt;, size &lt;int&gt;, and abbreviated variable names
-## #   ¹​Life_form, ²​mean_SLA, ³​mean_LMA</code></pre>
+## #   SD_Tannin_cond &lt;dbl&gt;, size &lt;int&gt;</code></pre>
 <p>Select Dilleniaceae family and compare their means with the liana
 mean</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
 <pre><code>## Rows: 7,256
-## Columns: 34
+## Columns: 35
 ## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
 ## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
 ## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
@@ -1925,7 +1926,8 @@ mean</p>
 ## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>litterquality_Dil<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Family,<span class="st">&#39;Dilleniaceae&#39;</span>))<span class="sc">%&gt;%</span></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Family, Tissue, Life_form)<span class="sc">%&gt;%</span></span>
@@ -1956,15 +1958,14 @@ mean</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>litterquality_Dil</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 24
 ## # Groups:   Family, Tissue [1]
-##   Family  Tissue Life_…¹ mean_…² SD_SLA mean_…³ SD_LMA mean_C  SD_C mean_N  SD_N
-##   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-## 1 Dillen… leaf   L          90.1   NA      111     NA     NaN    NA   14.7 NA   
-## 2 Dillen… leaf   T          80.6   44.9    375.   629.    NaN    NA   12.6  2.11
-## # … with 13 more variables: mean_P &lt;dbl&gt;, SD_P &lt;dbl&gt;, mean_Mg &lt;dbl&gt;,
+##   Family    Tissue Life_form mean_SLA SD_SLA mean_LMA SD_LMA mean_C  SD_C mean_N
+##   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Dillenia… leaf   L             90.1   NA       111     NA     NaN    NA   14.7
+## 2 Dillenia… leaf   T             80.6   44.9     375.   629.    NaN    NA   12.6
+## # ℹ 14 more variables: SD_N &lt;dbl&gt;, mean_P &lt;dbl&gt;, SD_P &lt;dbl&gt;, mean_Mg &lt;dbl&gt;,
 ## #   SD_Mg &lt;dbl&gt;, mean_Ca &lt;dbl&gt;, SD_Ca &lt;dbl&gt;, mean_Lignin &lt;dbl&gt;,
 ## #   SD_Lignin &lt;dbl&gt;, mean_Tannins_wat &lt;dbl&gt;, SD_Tannin_wat &lt;dbl&gt;,
-## #   mean_Tannin_cond &lt;dbl&gt;, SD_Tannin_cond &lt;dbl&gt;, size &lt;int&gt;, and abbreviated
-## #   variable names ¹​Life_form, ²​mean_SLA, ³​mean_LMA</code></pre>
+## #   mean_Tannin_cond &lt;dbl&gt;, SD_Tannin_cond &lt;dbl&gt;, size &lt;int&gt;</code></pre>
 <p>A reviewer of the manuscript mentioned about low nutrient in the
 family of Dilleniaceae. Thus, I subset the family of Dilleniaceae above
 and compare the nutrients with the average computed for all liana
@@ -2223,21 +2224,20 @@ come from and give the sample size per chemical element.</p>
 <div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>litterquality_avg2</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 32
 ## # Groups:   Tissue [3]
-##   Tissue Life_form mean_SLA SD_SLA size_SLA mean_LMA SD_LMA size_…¹ mean_C  SD_C
-##   &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;
-## 1 bark   L             NaN    NA          4    NaN     NA         4   444.  8.81
-## 2 bark   T             NaN    NA         58    NaN     NA        58   453. 19.7 
-## 3 leaf   L             188.  106.       305     71.5   49.4     305   437. 63.1 
-## 4 leaf   T             125.   69.4     6719    112.   121.     6719   434. 55.2 
-## 5 wood   L             NaN    NA         10    NaN     NA        10   458.  8.72
-## 6 wood   T             NaN    NA        160    NaN     NA       160   468. 15.5 
-## # … with 22 more variables: size_C &lt;int&gt;, mean_N &lt;dbl&gt;, SD_N &lt;dbl&gt;,
+##   Tissue Life_form mean_SLA SD_SLA size_SLA mean_LMA SD_LMA size_LMA mean_C
+##   &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;  &lt;dbl&gt;
+## 1 bark   L             NaN    NA          4    NaN     NA          4   444.
+## 2 bark   T             NaN    NA         58    NaN     NA         58   453.
+## 3 leaf   L             188.  106.       305     71.5   49.4      305   437.
+## 4 leaf   T             125.   69.4     6719    112.   121.      6719   434.
+## 5 wood   L             NaN    NA         10    NaN     NA         10   458.
+## 6 wood   T             NaN    NA        160    NaN     NA        160   468.
+## # ℹ 23 more variables: SD_C &lt;dbl&gt;, size_C &lt;int&gt;, mean_N &lt;dbl&gt;, SD_N &lt;dbl&gt;,
 ## #   size_N &lt;int&gt;, mean_P &lt;dbl&gt;, SD_P &lt;dbl&gt;, size_P &lt;int&gt;, mean_Mg &lt;dbl&gt;,
 ## #   SD_Mg &lt;dbl&gt;, size_Mg &lt;int&gt;, mean_Ca &lt;dbl&gt;, SD_Ca &lt;dbl&gt;, size_Ca &lt;int&gt;,
 ## #   mean_Lignin &lt;dbl&gt;, SD_Lignin &lt;dbl&gt;, size_Lignin &lt;int&gt;,
 ## #   mean_Tannins_wat &lt;dbl&gt;, SD_Tannin_wat &lt;dbl&gt;, size_Tannin_wat &lt;int&gt;,
-## #   mean_Tannin_cond &lt;dbl&gt;, SD_Tannin_cond &lt;dbl&gt;, size_Tannin_cond &lt;int&gt;, and
-## #   abbreviated variable name ¹​size_LMA</code></pre>
+## #   mean_Tannin_cond &lt;dbl&gt;, SD_Tannin_cond &lt;dbl&gt;, size_Tannin_cond &lt;int&gt;</code></pre>
 </div>
 <div id="carry-out-t.test-on-different-chemical-and-per-organ" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Carry out t.test on
@@ -2262,7 +2262,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T          78.9
 ##  9 leaf   T          55.6
 ## 10 leaf   T         120. 
-## # … with 3,177 more rows</code></pre>
+## # ℹ 3,177 more rows</code></pre>
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>SLA, SLA<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2293,7 +2293,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T         127. 
 ##  9 leaf   T         180. 
 ## 10 leaf   T          83.1
-## # … with 3,124 more rows</code></pre>
+## # ℹ 3,124 more rows</code></pre>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>LMA, LMA<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2325,7 +2325,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T             29.1
 ##  9 leaf   T             29.9
 ## 10 leaf   T             23  
-## # … with 5,712 more rows</code></pre>
+## # ℹ 5,712 more rows</code></pre>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Nitrogen_leaf, Nitrogen<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2357,7 +2357,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 bark   T             3.9 
 ##  9 bark   T             7.03
 ## 10 bark   T             4.18
-## # … with 39 more rows</code></pre>
+## # ℹ 39 more rows</code></pre>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Nitrogen_bark, Nitrogen<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2389,7 +2389,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T              4.2
 ##  9 wood   T              1.9
 ## 10 wood   T              4  
-## # … with 157 more rows</code></pre>
+## # ℹ 157 more rows</code></pre>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Nitrogen_wood, Nitrogen<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2422,7 +2422,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T               1.2 
 ##  9 leaf   T               1.20
 ## 10 leaf   T               0.94
-## # … with 4,103 more rows</code></pre>
+## # ℹ 4,103 more rows</code></pre>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Phosphorus_leaf, Phosphorus<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2454,7 +2454,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 bark   T              0.495
 ##  9 bark   T              0.87 
 ## 10 bark   T              0.21 
-## # … with 37 more rows</code></pre>
+## # ℹ 37 more rows</code></pre>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Phosphorus_bark, Phosphorus<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2486,7 +2486,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T              0.706
 ##  9 wood   T              0.255
 ## 10 wood   T              1.26 
-## # … with 157 more rows</code></pre>
+## # ℹ 157 more rows</code></pre>
 <div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Phosphorus_wood, Phosphorus<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2519,7 +2519,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T            502
 ##  9 leaf   T            487
 ## 10 leaf   L            452
-## # … with 43 more rows</code></pre>
+## # ℹ 43 more rows</code></pre>
 <div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Carbon_leaf, Carbon<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2551,7 +2551,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 bark   T           427.
 ##  9 bark   T           497 
 ## 10 bark   T           441 
-## # … with 39 more rows</code></pre>
+## # ℹ 39 more rows</code></pre>
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Carbon_bark, Carbon<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2583,7 +2583,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T           471.
 ##  9 wood   T           467.
 ## 10 wood   T           460.
-## # … with 19 more rows</code></pre>
+## # ℹ 19 more rows</code></pre>
 <div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Carbon_wood, Carbon<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2616,7 +2616,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T          14.0 
 ##  9 leaf   T          18.6 
 ## 10 leaf   L          20.0 
-## # … with 37 more rows</code></pre>
+## # ℹ 37 more rows</code></pre>
 <div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Lignin_leaf, Lignin<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2686,7 +2686,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T           28.7
 ##  9 wood   T           33.8
 ## 10 wood   T           32.1
-## # … with 19 more rows</code></pre>
+## # ℹ 19 more rows</code></pre>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Lignin_wood, Lignin<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2703,7 +2703,7 @@ analyses and report the limitations of the data anyway.</p>
 <p>leaf</p>
 <div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
 <pre><code>## Rows: 7,256
-## Columns: 34
+## Columns: 35
 ## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
 ## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
 ## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
@@ -2737,7 +2737,8 @@ analyses and report the limitations of the data anyway.</p>
 ## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 ## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a>Tannins_wat_leaf<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
 <span id="cb143-2"><a href="#cb143-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tannins_wat)<span class="sc">%&gt;%</span></span>
 <span id="cb143-3"><a href="#cb143-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Tannins_wat,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
@@ -2756,7 +2757,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T                6.75
 ##  9 leaf   T                9.14
 ## 10 leaf   L                6.6 
-## # … with 30 more rows</code></pre>
+## # ℹ 30 more rows</code></pre>
 <div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Tannins_wat_leaf, Tannins_wat<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2859,7 +2860,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T            23.9
 ##  9 leaf   T            26.3
 ## 10 leaf   T            11.1
-## # … with 2,277 more rows</code></pre>
+## # ℹ 2,277 more rows</code></pre>
 <div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Calcium_leaf, Calcium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2891,7 +2892,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 bark   T           18.9 
 ##  9 bark   T           27.4 
 ## 10 bark   T           14.5 
-## # … with 30 more rows</code></pre>
+## # ℹ 30 more rows</code></pre>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Calcium_bark, Calcium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2923,7 +2924,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T           2.84 
 ##  9 wood   T           6.06 
 ## 10 wood   T           0.63 
-## # … with 151 more rows</code></pre>
+## # ℹ 151 more rows</code></pre>
 <div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Calcium_wood, Calcium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2956,7 +2957,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 leaf   T              1.03
 ##  9 leaf   T              1.25
 ## 10 leaf   L              7.35
-## # … with 30 more rows</code></pre>
+## # ℹ 30 more rows</code></pre>
 <div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Magnesium_leaf, Magnesium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -2988,7 +2989,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 bark   T             3.17 
 ##  9 bark   T             1    
 ## 10 bark   T             0.8  
-## # … with 30 more rows</code></pre>
+## # ℹ 30 more rows</code></pre>
 <div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Magnesium_bark, Magnesium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -3020,7 +3021,7 @@ analyses and report the limitations of the data anyway.</p>
 ##  8 wood   T             0.461
 ##  9 wood   T             0.614
 ## 10 wood   T             0.312
-## # … with 151 more rows</code></pre>
+## # ℹ 151 more rows</code></pre>
 <div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Magnesium_wood, Magnesium<span class="sc">~</span>Life_form)</span></code></pre></div>
 <pre><code>## 
 ##  Welch Two Sample t-test
@@ -3033,6 +3034,929 @@ analyses and report the limitations of the data anyway.</p>
 ## sample estimates:
 ## mean in group L mean in group T 
 ##       0.8569000       0.5243872</code></pre>
+<p>One co-author asked to separate live leaves chemistry from senesced
+ones.</p>
+</div>
+<div id="input-file-1" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Input file</h2>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="#cb179-1" aria-hidden="true" tabindex="-1"></a>litterquality<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">&quot;Liana_perspective_datab.csv&quot;</span>,</span>
+<span id="cb179-2"><a href="#cb179-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">col_types =</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">Literature Source</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-3"><a href="#cb179-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kingdom =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-4"><a href="#cb179-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Subkingdom =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-5"><a href="#cb179-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Division =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-6"><a href="#cb179-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Class =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-7"><a href="#cb179-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Subclass =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-8"><a href="#cb179-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Order =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-9"><a href="#cb179-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Family =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-10"><a href="#cb179-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Genus =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-11"><a href="#cb179-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Species =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-12"><a href="#cb179-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Life Form</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-13"><a href="#cb179-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">Latitude =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-14"><a href="#cb179-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">Longitude =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-15"><a href="#cb179-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">MAT(degC)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-16"><a href="#cb179-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">MAP(mm)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-17"><a href="#cb179-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">Altitude =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-18"><a href="#cb179-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Site1 =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-19"><a href="#cb179-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">Country =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-20"><a href="#cb179-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">Continent =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-21"><a href="#cb179-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">ClimRegion =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-22"><a href="#cb179-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tissue =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb179-23"><a href="#cb179-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">SLA =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-24"><a href="#cb179-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">LMA =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-25"><a href="#cb179-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">Nitrogen =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-26"><a href="#cb179-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">Phosphorus =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-27"><a href="#cb179-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">Calcium =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-28"><a href="#cb179-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">Magnesium =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-29"><a href="#cb179-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">Carbon =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-30"><a href="#cb179-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tannins_cond =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-31"><a href="#cb179-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tannins_wat =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-32"><a href="#cb179-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lignin =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-33"><a href="#cb179-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">Cellulose_percent =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-34"><a href="#cb179-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">Hemicellulose_percent =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-35"><a href="#cb179-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">Fiber_content_percent =</span> <span class="fu">col_double</span>(),</span>
+<span id="cb179-36"><a href="#cb179-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tissue_status=</span> <span class="fu">col_character</span>()))</span></code></pre></div>
+<pre><code>## Warning: The following named parsers don&#39;t match the column names: Life Form</code></pre>
+</div>
+<div id="compute-chemical-traits-average-per-tissue-2" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Compute chemical
+traits average per tissue</h2>
+<p>Average with tissue status (live or senesced)</p>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="#cb181-1" aria-hidden="true" tabindex="-1"></a>litterquality_avg3<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb181-2"><a href="#cb181-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form, Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb181-3"><a href="#cb181-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_SLA=</span><span class="fu">mean</span>(SLA, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-4"><a href="#cb181-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_SLA=</span><span class="fu">sd</span>(SLA, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-5"><a href="#cb181-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_SLA=</span><span class="fu">n</span>(),</span>
+<span id="cb181-6"><a href="#cb181-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_LMA=</span><span class="fu">mean</span>(LMA, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-7"><a href="#cb181-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_LMA=</span><span class="fu">sd</span>(LMA, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-8"><a href="#cb181-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_LMA=</span><span class="fu">n</span>(),</span>
+<span id="cb181-9"><a href="#cb181-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_C=</span><span class="fu">mean</span>(Carbon, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-10"><a href="#cb181-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_C=</span><span class="fu">sd</span>(Carbon, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-11"><a href="#cb181-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_C=</span><span class="fu">n</span>(),</span>
+<span id="cb181-12"><a href="#cb181-12" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_N=</span><span class="fu">mean</span>(Nitrogen, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-13"><a href="#cb181-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_N=</span><span class="fu">sd</span>(Nitrogen, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-14"><a href="#cb181-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_N=</span><span class="fu">n</span>(),</span>
+<span id="cb181-15"><a href="#cb181-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_P=</span><span class="fu">mean</span>(Phosphorus, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-16"><a href="#cb181-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_P=</span><span class="fu">sd</span>(Phosphorus, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-17"><a href="#cb181-17" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_P=</span><span class="fu">n</span>(),</span>
+<span id="cb181-18"><a href="#cb181-18" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_Mg=</span><span class="fu">mean</span>(Magnesium, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-19"><a href="#cb181-19" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Mg=</span><span class="fu">sd</span>(Magnesium, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-20"><a href="#cb181-20" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Mg=</span><span class="fu">n</span>(),</span>
+<span id="cb181-21"><a href="#cb181-21" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_Ca=</span><span class="fu">mean</span>(Calcium, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-22"><a href="#cb181-22" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Ca=</span><span class="fu">sd</span>(Calcium, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-23"><a href="#cb181-23" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Ca=</span><span class="fu">n</span>(),</span>
+<span id="cb181-24"><a href="#cb181-24" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_Lignin=</span><span class="fu">mean</span>(Lignin, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-25"><a href="#cb181-25" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Lignin=</span><span class="fu">sd</span>(Lignin, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-26"><a href="#cb181-26" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Lignin=</span><span class="fu">n</span>(),</span>
+<span id="cb181-27"><a href="#cb181-27" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_Tannins_wat=</span><span class="fu">mean</span>(Tannins_wat, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-28"><a href="#cb181-28" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Tannin_wat=</span><span class="fu">sd</span>(Tannins_wat, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-29"><a href="#cb181-29" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Tannin_wat=</span><span class="fu">n</span>(),</span>
+<span id="cb181-30"><a href="#cb181-30" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mean_Tannin_cond=</span><span class="fu">mean</span>(Tannins_cond, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-31"><a href="#cb181-31" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Tannin_cond=</span><span class="fu">sd</span>(Tannins_cond, <span class="at">na.rm=</span>T),</span>
+<span id="cb181-32"><a href="#cb181-32" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Tannin_cond=</span><span class="fu">n</span>()</span>
+<span id="cb181-33"><a href="#cb181-33" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="#cb183-1" aria-hidden="true" tabindex="-1"></a>litterquality_avg3</span></code></pre></div>
+<pre><code>## # A tibble: 10 × 33
+## # Groups:   Tissue, Life_form [6]
+##    Tissue Life_form Tissue_status mean_SLA SD_SLA size_SLA mean_LMA SD_LMA
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##  1 bark   L         live              NaN    NA          4    NaN     NA  
+##  2 bark   T         live              NaN    NA         56    NaN     NA  
+##  3 bark   T         senesced          NaN    NA          2    NaN     NA  
+##  4 leaf   L         live              192.  111.       280     71.5   49.4
+##  5 leaf   L         senesced          164.   51.3       25    NaN     NA  
+##  6 leaf   T         live              125.   69.6     6691    112.   121. 
+##  7 leaf   T         senesced          107.   35.3       28    NaN     NA  
+##  8 wood   L         live              NaN    NA         10    NaN     NA  
+##  9 wood   T         live              NaN    NA        158    NaN     NA  
+## 10 wood   T         senesced          NaN    NA          2    NaN     NA  
+## # ℹ 25 more variables: size_LMA &lt;int&gt;, mean_C &lt;dbl&gt;, SD_C &lt;dbl&gt;, size_C &lt;int&gt;,
+## #   mean_N &lt;dbl&gt;, SD_N &lt;dbl&gt;, size_N &lt;int&gt;, mean_P &lt;dbl&gt;, SD_P &lt;dbl&gt;,
+## #   size_P &lt;int&gt;, mean_Mg &lt;dbl&gt;, SD_Mg &lt;dbl&gt;, size_Mg &lt;int&gt;, mean_Ca &lt;dbl&gt;,
+## #   SD_Ca &lt;dbl&gt;, size_Ca &lt;int&gt;, mean_Lignin &lt;dbl&gt;, SD_Lignin &lt;dbl&gt;,
+## #   size_Lignin &lt;int&gt;, mean_Tannins_wat &lt;dbl&gt;, SD_Tannin_wat &lt;dbl&gt;,
+## #   size_Tannin_wat &lt;int&gt;, mean_Tannin_cond &lt;dbl&gt;, SD_Tannin_cond &lt;dbl&gt;,
+## #   size_Tannin_cond &lt;int&gt;</code></pre>
+</div>
+<div id="compute-chemical-traits-average-per-leaf-for-tissue-status-with-sample-size-per-element" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Compute chemical
+traits average per leaf for tissue status with sample size per
+element</h2>
+<div id="live-leaf" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> live leaf</h3>
+<p>SLA</p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
+<pre><code>## Rows: 7,256
+## Columns: 35
+## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
+## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
+## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
+## $ Division              &lt;chr&gt; &quot;Magnoliophyta&quot;, &quot;Magnoliophyta&quot;, &quot;Magnoliophyta…
+## $ Class                 &lt;chr&gt; &quot;Magnoliopsida&quot;, &quot;Magnoliopsida&quot;, &quot;Magnoliopsida…
+## $ Subclass              &lt;chr&gt; &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Ros…
+## $ Order                 &lt;chr&gt; &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fab…
+## $ Family                &lt;chr&gt; &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, …
+## $ Genus                 &lt;chr&gt; &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Aba…
+## $ Species               &lt;chr&gt; &quot;Abarema curvicarpa&quot;, &quot;Abarema jupunba&quot;, &quot;Abarem…
+## $ Life_form             &lt;chr&gt; &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;…
+## $ Latitude              &lt;dbl&gt; 5.30, 4.00, 5.33, 5.30, 5.30, NA, -1.75, -1.75, …
+## $ Longitude             &lt;dbl&gt; -53.50, -53.00, -52.83, -53.50, -53.50, NA, -47.…
+## $ `MAT(degC)`           &lt;dbl&gt; 25.8, 25.0, 25.8, 25.8, 25.8, NA, 25.9, 25.9, 25…
+## $ `MAP(mm)`             &lt;dbl&gt; 3000.0, 3000.0, 2900.0, 3000.0, 3000.0, NA, 2836…
+## $ Altitude              &lt;dbl&gt; NA, NA, NA, NA, NA, NA, 48, 48, 48, 48, NA, NA, …
+## $ Site1                 &lt;chr&gt; &quot;St-Elie(DVD)&quot;, NA, &quot;Paracou&quot;, &quot;St-Elie(DVD)&quot;, &quot;…
+## $ Country               &lt;chr&gt; &quot;French Guiana&quot;, &quot;French Guiana&quot;, &quot;French Guiana…
+## $ Continent             &lt;chr&gt; &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, NA, &quot;SAm&quot;, &quot;S…
+## $ ClimRegion            &lt;chr&gt; &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, NA, &quot;TR&quot;, &quot;TR&quot;, &quot;T…
+## $ Tissue                &lt;chr&gt; &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, …
+## $ SLA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ LMA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Nitrogen              &lt;dbl&gt; 24.0, 21.1, 18.0, 20.0, 19.0, NA, 21.6, 21.3, 29…
+## $ Phosphorus            &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Calcium               &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Magnesium             &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Carbon                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_cond          &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_wat           &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="#cb187-1" aria-hidden="true" tabindex="-1"></a>SLA_avg_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb187-2"><a href="#cb187-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, SLA)<span class="sc">%&gt;%</span></span>
+<span id="cb187-3"><a href="#cb187-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(SLA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb187-4"><a href="#cb187-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb187-5"><a href="#cb187-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb187-6"><a href="#cb187-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_SLA=</span><span class="fu">mean</span>(SLA, <span class="at">na.rm=</span>T),</span>
+<span id="cb187-7"><a href="#cb187-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_SLA=</span><span class="fu">sd</span>(SLA, <span class="at">na.rm=</span>T),</span>
+<span id="cb187-8"><a href="#cb187-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_SLA=</span><span class="fu">n</span>()</span>
+<span id="cb187-9"><a href="#cb187-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="#cb189-1" aria-hidden="true" tabindex="-1"></a>SLA_avg_live</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_SLA SD_SLA size_SLA
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;
+## 1 leaf   L         live              192.  111.       172
+## 2 leaf   L         senesced          164.   51.3       25
+## 3 leaf   T         live              125.   69.6     2962
+## 4 leaf   T         senesced          107.   35.3       28</code></pre>
+<p>LMA</p>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="#cb191-1" aria-hidden="true" tabindex="-1"></a>LMA_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb191-2"><a href="#cb191-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, LMA)<span class="sc">%&gt;%</span></span>
+<span id="cb191-3"><a href="#cb191-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(LMA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb191-4"><a href="#cb191-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb191-5"><a href="#cb191-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb191-6"><a href="#cb191-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_LMA=</span><span class="fu">mean</span>(LMA, <span class="at">na.rm=</span>T),</span>
+<span id="cb191-7"><a href="#cb191-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_LMA=</span><span class="fu">sd</span>(LMA, <span class="at">na.rm=</span>T),</span>
+<span id="cb191-8"><a href="#cb191-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_LMA=</span><span class="fu">n</span>()</span>
+<span id="cb191-9"><a href="#cb191-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="#cb193-1" aria-hidden="true" tabindex="-1"></a>LMA_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_LMA SD_LMA size_LMA
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;
+## 1 leaf   L         live              71.5   49.4      172
+## 2 leaf   T         live             112.   121.      2962</code></pre>
+<p>Nitrogen</p>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="#cb195-1" aria-hidden="true" tabindex="-1"></a>Nitrogen_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb195-2"><a href="#cb195-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Nitrogen)<span class="sc">%&gt;%</span></span>
+<span id="cb195-3"><a href="#cb195-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Nitrogen,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb195-4"><a href="#cb195-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb195-5"><a href="#cb195-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb195-6"><a href="#cb195-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Nitrogen=</span><span class="fu">mean</span>(Nitrogen, <span class="at">na.rm=</span>T),</span>
+<span id="cb195-7"><a href="#cb195-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Nitrogen=</span><span class="fu">sd</span>(Nitrogen, <span class="at">na.rm=</span>T),</span>
+<span id="cb195-8"><a href="#cb195-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Nitrogen=</span><span class="fu">n</span>()</span>
+<span id="cb195-9"><a href="#cb195-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="#cb197-1" aria-hidden="true" tabindex="-1"></a>Nitrogen_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Nitrogen SD_Nitrogen size_Nitrogen
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                 &lt;dbl&gt;       &lt;dbl&gt;         &lt;int&gt;
+## 1 leaf   L         live                   24.0        9.58           194
+## 2 leaf   L         senesced               15.6        5.40            24
+## 3 leaf   T         live                   19.5        7.19          5479
+## 4 leaf   T         senesced               12.5        2.85            25</code></pre>
+<p>Phosphorus</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="#cb199-1" aria-hidden="true" tabindex="-1"></a>Phosphorus_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb199-2"><a href="#cb199-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Phosphorus)<span class="sc">%&gt;%</span></span>
+<span id="cb199-3"><a href="#cb199-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Phosphorus,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb199-4"><a href="#cb199-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb199-5"><a href="#cb199-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb199-6"><a href="#cb199-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Phosphorus=</span><span class="fu">mean</span>(Phosphorus, <span class="at">na.rm=</span>T),</span>
+<span id="cb199-7"><a href="#cb199-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Phosphorus=</span><span class="fu">sd</span>(Phosphorus, <span class="at">na.rm=</span>T),</span>
+<span id="cb199-8"><a href="#cb199-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Phosphorus=</span><span class="fu">n</span>()</span>
+<span id="cb199-9"><a href="#cb199-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="#cb201-1" aria-hidden="true" tabindex="-1"></a>Phosphorus_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Phosphorus SD_Phosphorus size_Phosphorus
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                   &lt;dbl&gt;         &lt;dbl&gt;           &lt;int&gt;
+## 1 leaf   L         live                    1.75          1.33              134
+## 2 leaf   L         senesced                0.865         0.473              21
+## 3 leaf   T         live                    1.36          0.844            3935
+## 4 leaf   T         senesced                0.86          0.617              23</code></pre>
+<p>Carbon</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="#cb203-1" aria-hidden="true" tabindex="-1"></a>Carbon_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb203-2"><a href="#cb203-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Carbon)<span class="sc">%&gt;%</span></span>
+<span id="cb203-3"><a href="#cb203-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Carbon,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb203-4"><a href="#cb203-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb203-5"><a href="#cb203-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb203-6"><a href="#cb203-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Carbon=</span><span class="fu">mean</span>(Carbon, <span class="at">na.rm=</span>T),</span>
+<span id="cb203-7"><a href="#cb203-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Carbon=</span><span class="fu">sd</span>(Carbon, <span class="at">na.rm=</span>T),</span>
+<span id="cb203-8"><a href="#cb203-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Carbon=</span><span class="fu">n</span>()</span>
+<span id="cb203-9"><a href="#cb203-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="#cb205-1" aria-hidden="true" tabindex="-1"></a>Carbon_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Carbon SD_Carbon size_Carbon
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;       &lt;int&gt;
+## 1 leaf   L         senesced             437.      63.1          25
+## 2 leaf   T         senesced             434.      55.2          28</code></pre>
+<p>Lignin</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="#cb207-1" aria-hidden="true" tabindex="-1"></a>Lignin_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb207-2"><a href="#cb207-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Lignin)<span class="sc">%&gt;%</span></span>
+<span id="cb207-3"><a href="#cb207-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Lignin,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb207-4"><a href="#cb207-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb207-5"><a href="#cb207-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb207-6"><a href="#cb207-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Lignin=</span><span class="fu">mean</span>(Lignin, <span class="at">na.rm=</span>T),</span>
+<span id="cb207-7"><a href="#cb207-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Lignin=</span><span class="fu">sd</span>(Lignin, <span class="at">na.rm=</span>T),</span>
+<span id="cb207-8"><a href="#cb207-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Lignin=</span><span class="fu">n</span>()</span>
+<span id="cb207-9"><a href="#cb207-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="#cb209-1" aria-hidden="true" tabindex="-1"></a>Lignin_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Lignin SD_Lignin size_Lignin
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;       &lt;int&gt;
+## 1 leaf   L         senesced             15.7      6.84          22
+## 2 leaf   T         senesced             15.0      6.68          25</code></pre>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="#cb211-1" aria-hidden="true" tabindex="-1"></a>Tannins_wat_avg<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb211-2"><a href="#cb211-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Tannins_wat)<span class="sc">%&gt;%</span></span>
+<span id="cb211-3"><a href="#cb211-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Tannins_wat,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb211-4"><a href="#cb211-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb211-5"><a href="#cb211-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb211-6"><a href="#cb211-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Tannin_wat=</span><span class="fu">mean</span>(Tannins_wat, <span class="at">na.rm=</span>T),</span>
+<span id="cb211-7"><a href="#cb211-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Tannin_wat=</span><span class="fu">sd</span>(Tannins_wat, <span class="at">na.rm=</span>T),</span>
+<span id="cb211-8"><a href="#cb211-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Tannin_wat=</span><span class="fu">n</span>()</span>
+<span id="cb211-9"><a href="#cb211-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="#cb213-1" aria-hidden="true" tabindex="-1"></a>Tannins_wat_avg</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Tannin_wat SD_Tannin_wat size_Tannin_wat
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                   &lt;dbl&gt;         &lt;dbl&gt;           &lt;int&gt;
+## 1 leaf   L         senesced                 4.14          3.22              20
+## 2 leaf   T         senesced                 4.59          2.80              20</code></pre>
+<p>Magnesium</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="#cb215-1" aria-hidden="true" tabindex="-1"></a>Magnesium_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb215-2"><a href="#cb215-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Magnesium)<span class="sc">%&gt;%</span></span>
+<span id="cb215-3"><a href="#cb215-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Magnesium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb215-4"><a href="#cb215-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb215-5"><a href="#cb215-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb215-6"><a href="#cb215-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Magnesium=</span><span class="fu">mean</span>(Magnesium, <span class="at">na.rm=</span>T),</span>
+<span id="cb215-7"><a href="#cb215-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Magnesium=</span><span class="fu">sd</span>(Magnesium, <span class="at">na.rm=</span>T),</span>
+<span id="cb215-8"><a href="#cb215-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Magnesium=</span><span class="fu">n</span>()</span>
+<span id="cb215-9"><a href="#cb215-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="#cb217-1" aria-hidden="true" tabindex="-1"></a>Magnesium_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Magnesium SD_Magnesium size_Magnesium
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                  &lt;dbl&gt;        &lt;dbl&gt;          &lt;int&gt;
+## 1 leaf   L         senesced                3.15         1.86             20
+## 2 leaf   T         senesced                2.42         1.62             20</code></pre>
+<p>Calcium</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="#cb219-1" aria-hidden="true" tabindex="-1"></a>Calcium_avg_status<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb219-2"><a href="#cb219-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Calcium)<span class="sc">%&gt;%</span></span>
+<span id="cb219-3"><a href="#cb219-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Calcium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb219-4"><a href="#cb219-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb219-5"><a href="#cb219-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Tissue, Life_form,Tissue_status)<span class="sc">%&gt;%</span></span>
+<span id="cb219-6"><a href="#cb219-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_Calcium=</span><span class="fu">mean</span>(Calcium, <span class="at">na.rm=</span>T),</span>
+<span id="cb219-7"><a href="#cb219-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">SD_Calcium=</span><span class="fu">sd</span>(Calcium, <span class="at">na.rm=</span>T),</span>
+<span id="cb219-8"><a href="#cb219-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size_Calcium=</span><span class="fu">n</span>()</span>
+<span id="cb219-9"><a href="#cb219-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Tissue&#39;, &#39;Life_form&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="#cb221-1" aria-hidden="true" tabindex="-1"></a>Calcium_avg_status</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+## # Groups:   Tissue, Life_form [2]
+##   Tissue Life_form Tissue_status mean_Calcium SD_Calcium size_Calcium
+##   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;        &lt;int&gt;
+## 1 leaf   L         live                  14.8       8.85           89
+## 2 leaf   L         senesced              25.6      15.9            21
+## 3 leaf   T         live                  10.0       6.32         2154
+## 4 leaf   T         senesced              19.3      14.6            23</code></pre>
+</div>
+</div>
+<div id="carry-out-t.test-on-different-chemical-for-leaf-do-for-live-and-senesced-ones" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Carry out t.test on
+different chemical for leaf do for live and senesced ones</h2>
+<div id="live-leaves" class="section level3" number="3.8.1">
+<h3><span class="header-section-number">3.8.1</span> Live leaves</h3>
+<p>SLA Leaf live</p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="#cb223-1" aria-hidden="true" tabindex="-1"></a>SLA_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb223-2"><a href="#cb223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status,SLA)<span class="sc">%&gt;%</span></span>
+<span id="cb223-3"><a href="#cb223-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(SLA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb223-4"><a href="#cb223-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb223-5"><a href="#cb223-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb223-6"><a href="#cb223-6" aria-hidden="true" tabindex="-1"></a>SLA_live</span></code></pre></div>
+<pre><code>## # A tibble: 3,134 × 4
+##    Tissue Life_form Tissue_status   SLA
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;         &lt;dbl&gt;
+##  1 leaf   T         live           76.6
+##  2 leaf   T         live           74.3
+##  3 leaf   L         live          142. 
+##  4 leaf   T         live          149. 
+##  5 leaf   T         live           95.2
+##  6 leaf   T         live           95.5
+##  7 leaf   T         live           78  
+##  8 leaf   T         live           78.9
+##  9 leaf   T         live           55.6
+## 10 leaf   T         live          120. 
+## # ℹ 3,124 more rows</code></pre>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>SLA_live, SLA<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  SLA by Life_form
+## t = 7.7814, df = 178.89, p-value = 5.522e-13
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  49.77017 83.58941
+## sample estimates:
+## mean in group L mean in group T 
+##        191.9141        125.2343</code></pre>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SLA higher for live liana leaves than live tree leaves (t=7.781, df=178.89, p&lt;0.001)</span></span></code></pre></div>
+<p>LMA Leaf</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="#cb228-1" aria-hidden="true" tabindex="-1"></a>LMA_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb228-2"><a href="#cb228-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, LMA)<span class="sc">%&gt;%</span></span>
+<span id="cb228-3"><a href="#cb228-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(LMA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb228-4"><a href="#cb228-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb228-5"><a href="#cb228-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb228-6"><a href="#cb228-6" aria-hidden="true" tabindex="-1"></a>LMA_live</span></code></pre></div>
+<pre><code>## # A tibble: 3,134 × 4
+##    Tissue Life_form Tissue_status   LMA
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;         &lt;dbl&gt;
+##  1 leaf   T         live          130. 
+##  2 leaf   T         live          135. 
+##  3 leaf   L         live           70.3
+##  4 leaf   T         live           67  
+##  5 leaf   T         live          105  
+##  6 leaf   T         live          105. 
+##  7 leaf   T         live          128. 
+##  8 leaf   T         live          127. 
+##  9 leaf   T         live          180. 
+## 10 leaf   T         live           83.1
+## # ℹ 3,124 more rows</code></pre>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>LMA_live, LMA<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  LMA by Life_form
+## t = -9.2711, df = 308.54, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -49.19835 -31.97106
+## sample estimates:
+## mean in group L mean in group T 
+##         71.5000        112.0847</code></pre>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="#cb232-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lower LMA in live liana leaves than live tree leaves (t=-9.271, df=308.54, p&lt;0.001)</span></span></code></pre></div>
+<p>Nitrogen Leaf live</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="#cb233-1" aria-hidden="true" tabindex="-1"></a>Nitrogen_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb233-2"><a href="#cb233-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Nitrogen)<span class="sc">%&gt;%</span></span>
+<span id="cb233-3"><a href="#cb233-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Nitrogen,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb233-4"><a href="#cb233-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb233-5"><a href="#cb233-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb233-6"><a href="#cb233-6" aria-hidden="true" tabindex="-1"></a>Nitrogen_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 5,673 × 4
+##    Tissue Life_form Tissue_status Nitrogen
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;
+##  1 leaf   T         live              24  
+##  2 leaf   T         live              21.1
+##  3 leaf   T         live              18  
+##  4 leaf   T         live              20  
+##  5 leaf   T         live              19  
+##  6 leaf   T         live              21.6
+##  7 leaf   T         live              21.3
+##  8 leaf   T         live              29.1
+##  9 leaf   T         live              29.9
+## 10 leaf   T         live              23  
+## # ℹ 5,663 more rows</code></pre>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Nitrogen_leaf_live, Nitrogen<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Nitrogen by Life_form
+## t = 6.5791, df = 200.77, p-value = 4.024e-10
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  3.199420 5.938037
+## sample estimates:
+## mean in group L mean in group T 
+##        24.02474        19.45601</code></pre>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nitrogen higher in live liana leaves than live tree leaves (t= 6.579, df=200.77, p&lt; 0.001)</span></span></code></pre></div>
+<p>Phosphorus</p>
+<p>leaf live</p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="#cb238-1" aria-hidden="true" tabindex="-1"></a>Phosphorus_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb238-2"><a href="#cb238-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Phosphorus)<span class="sc">%&gt;%</span></span>
+<span id="cb238-3"><a href="#cb238-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Phosphorus,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb238-4"><a href="#cb238-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb238-5"><a href="#cb238-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;live&#39;</span>))</span>
+<span id="cb238-6"><a href="#cb238-6" aria-hidden="true" tabindex="-1"></a>Phosphorus_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 4,069 × 4
+##    Tissue Life_form Tissue_status Phosphorus
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;              &lt;dbl&gt;
+##  1 leaf   T         live                1.8 
+##  2 leaf   T         live                1.9 
+##  3 leaf   L         live                0.59
+##  4 leaf   L         live                1.7 
+##  5 leaf   T         live                0.4 
+##  6 leaf   T         live                0.9 
+##  7 leaf   T         live                1.4 
+##  8 leaf   T         live                1.2 
+##  9 leaf   T         live                1.20
+## 10 leaf   T         live                0.94
+## # ℹ 4,059 more rows</code></pre>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="#cb240-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Phosphorus_leaf_live, Phosphorus<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Phosphorus by Life_form
+## t = 3.4458, df = 136.69, p-value = 0.0007567
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  0.1694516 0.6258724
+## sample estimates:
+## mean in group L mean in group T 
+##        1.754448        1.356786</code></pre>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Phosphorus higher in live liana leaves than live tree leaves (t= 3.5446, df=136.69, p&lt; 0.001)</span></span></code></pre></div>
+<p>Carbon</p>
+<p>leaf live</p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="#cb243-1" aria-hidden="true" tabindex="-1"></a>Carbon_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb243-2"><a href="#cb243-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Carbon)<span class="sc">%&gt;%</span></span>
+<span id="cb243-3"><a href="#cb243-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Carbon,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb243-4"><a href="#cb243-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb243-5"><a href="#cb243-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;live&#39;</span>))</span>
+<span id="cb243-6"><a href="#cb243-6" aria-hidden="true" tabindex="-1"></a>Carbon_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 4
+## # ℹ 4 variables: Tissue &lt;chr&gt;, Life_form &lt;chr&gt;, Tissue_status &lt;chr&gt;,
+## #   Carbon &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="#cb245-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No information available so no test.</span></span></code></pre></div>
+<p>Lignin</p>
+<p>leaf live</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="#cb246-1" aria-hidden="true" tabindex="-1"></a>Lignin_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb246-2"><a href="#cb246-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Lignin)<span class="sc">%&gt;%</span></span>
+<span id="cb246-3"><a href="#cb246-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Lignin,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb246-4"><a href="#cb246-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb246-5"><a href="#cb246-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;live&#39;</span>))</span>
+<span id="cb246-6"><a href="#cb246-6" aria-hidden="true" tabindex="-1"></a>Lignin_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 4
+## # ℹ 4 variables: Tissue &lt;chr&gt;, Life_form &lt;chr&gt;, Tissue_status &lt;chr&gt;,
+## #   Lignin &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No information available so no test.</span></span></code></pre></div>
+<p>Soluble tannins</p>
+<p>leaf live</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
+<pre><code>## Rows: 7,256
+## Columns: 35
+## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
+## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
+## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
+## $ Division              &lt;chr&gt; &quot;Magnoliophyta&quot;, &quot;Magnoliophyta&quot;, &quot;Magnoliophyta…
+## $ Class                 &lt;chr&gt; &quot;Magnoliopsida&quot;, &quot;Magnoliopsida&quot;, &quot;Magnoliopsida…
+## $ Subclass              &lt;chr&gt; &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Ros…
+## $ Order                 &lt;chr&gt; &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fab…
+## $ Family                &lt;chr&gt; &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, …
+## $ Genus                 &lt;chr&gt; &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Aba…
+## $ Species               &lt;chr&gt; &quot;Abarema curvicarpa&quot;, &quot;Abarema jupunba&quot;, &quot;Abarem…
+## $ Life_form             &lt;chr&gt; &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;…
+## $ Latitude              &lt;dbl&gt; 5.30, 4.00, 5.33, 5.30, 5.30, NA, -1.75, -1.75, …
+## $ Longitude             &lt;dbl&gt; -53.50, -53.00, -52.83, -53.50, -53.50, NA, -47.…
+## $ `MAT(degC)`           &lt;dbl&gt; 25.8, 25.0, 25.8, 25.8, 25.8, NA, 25.9, 25.9, 25…
+## $ `MAP(mm)`             &lt;dbl&gt; 3000.0, 3000.0, 2900.0, 3000.0, 3000.0, NA, 2836…
+## $ Altitude              &lt;dbl&gt; NA, NA, NA, NA, NA, NA, 48, 48, 48, 48, NA, NA, …
+## $ Site1                 &lt;chr&gt; &quot;St-Elie(DVD)&quot;, NA, &quot;Paracou&quot;, &quot;St-Elie(DVD)&quot;, &quot;…
+## $ Country               &lt;chr&gt; &quot;French Guiana&quot;, &quot;French Guiana&quot;, &quot;French Guiana…
+## $ Continent             &lt;chr&gt; &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, NA, &quot;SAm&quot;, &quot;S…
+## $ ClimRegion            &lt;chr&gt; &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, NA, &quot;TR&quot;, &quot;TR&quot;, &quot;T…
+## $ Tissue                &lt;chr&gt; &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, …
+## $ SLA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ LMA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Nitrogen              &lt;dbl&gt; 24.0, 21.1, 18.0, 20.0, 19.0, NA, 21.6, 21.3, 29…
+## $ Phosphorus            &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Calcium               &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Magnesium             &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Carbon                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_cond          &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_wat           &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="#cb251-1" aria-hidden="true" tabindex="-1"></a>Tannins_wat_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb251-2"><a href="#cb251-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Tannins_wat)<span class="sc">%&gt;%</span></span>
+<span id="cb251-3"><a href="#cb251-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Tannins_wat,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb251-4"><a href="#cb251-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb251-5"><a href="#cb251-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb251-6"><a href="#cb251-6" aria-hidden="true" tabindex="-1"></a>Tannins_wat_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 4
+## # ℹ 4 variables: Tissue &lt;chr&gt;, Life_form &lt;chr&gt;, Tissue_status &lt;chr&gt;,
+## #   Tannins_wat &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="#cb253-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No information available so no test.</span></span></code></pre></div>
+<p>Calcium</p>
+<p>leaf</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="#cb254-1" aria-hidden="true" tabindex="-1"></a>Calcium_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb254-2"><a href="#cb254-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Calcium)<span class="sc">%&gt;%</span></span>
+<span id="cb254-3"><a href="#cb254-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Calcium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb254-4"><a href="#cb254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb254-5"><a href="#cb254-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb254-6"><a href="#cb254-6" aria-hidden="true" tabindex="-1"></a>Calcium_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 2,243 × 4
+##    Tissue Life_form Tissue_status Calcium
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;
+##  1 leaf   L         live              4.8
+##  2 leaf   T         live              5.3
+##  3 leaf   T         live              5.7
+##  4 leaf   T         live              9.4
+##  5 leaf   T         live             10.7
+##  6 leaf   T         live              6.8
+##  7 leaf   T         live              0.8
+##  8 leaf   T         live             23.9
+##  9 leaf   T         live             26.3
+## 10 leaf   T         live             11.1
+## # ℹ 2,233 more rows</code></pre>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Calcium_leaf_live, Calcium<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Calcium by Life_form
+## t = 5.0489, df = 91.74, p-value = 2.244e-06
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  2.904546 6.671703
+## sample estimates:
+## mean in group L mean in group T 
+##        14.80112        10.01300</code></pre>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcium higher in live liana leaves than live tree leaves (t= 5.0489, df=91.74, p&lt; 0.001)</span></span></code></pre></div>
+<p>Magnesium</p>
+<p>leaf live</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="#cb259-1" aria-hidden="true" tabindex="-1"></a>Magnesium_leaf_live<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb259-2"><a href="#cb259-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Magnesium)<span class="sc">%&gt;%</span></span>
+<span id="cb259-3"><a href="#cb259-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Magnesium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb259-4"><a href="#cb259-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb259-5"><a href="#cb259-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;live&quot;</span>))</span>
+<span id="cb259-6"><a href="#cb259-6" aria-hidden="true" tabindex="-1"></a>Magnesium_leaf_live</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 4
+## # ℹ 4 variables: Tissue &lt;chr&gt;, Life_form &lt;chr&gt;, Tissue_status &lt;chr&gt;,
+## #   Magnesium &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No information available so no test.</span></span></code></pre></div>
+</div>
+<div id="senesced-leaves" class="section level3" number="3.8.2">
+<h3><span class="header-section-number">3.8.2</span> senesced
+leaves</h3>
+<p>SLA Leaf senesced</p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="#cb262-1" aria-hidden="true" tabindex="-1"></a>SLA_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb262-2"><a href="#cb262-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status,SLA)<span class="sc">%&gt;%</span></span>
+<span id="cb262-3"><a href="#cb262-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(SLA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb262-4"><a href="#cb262-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb262-5"><a href="#cb262-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb262-6"><a href="#cb262-6" aria-hidden="true" tabindex="-1"></a>SLA_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 53 × 4
+##    Tissue Life_form Tissue_status   SLA
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;         &lt;dbl&gt;
+##  1 leaf   T         senesced         94
+##  2 leaf   T         senesced        123
+##  3 leaf   T         senesced        119
+##  4 leaf   L         senesced        105
+##  5 leaf   L         senesced        110
+##  6 leaf   L         senesced        173
+##  7 leaf   T         senesced         84
+##  8 leaf   T         senesced         81
+##  9 leaf   T         senesced         88
+## 10 leaf   L         senesced        112
+## # ℹ 43 more rows</code></pre>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>SLA_senesced, SLA<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  SLA by Life_form
+## t = 4.6501, df = 41.941, p-value = 3.295e-05
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  32.22918 81.65539
+## sample estimates:
+## mean in group L mean in group T 
+##        164.0280        107.0857</code></pre>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="#cb266-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SLA higher for senesced liana leaves than senesced tree leaves (t=4.6501, df=41.941, p&lt;0.001)</span></span></code></pre></div>
+<p>LMA Leaf</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="#cb267-1" aria-hidden="true" tabindex="-1"></a>LMA_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb267-2"><a href="#cb267-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, LMA)<span class="sc">%&gt;%</span></span>
+<span id="cb267-3"><a href="#cb267-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(LMA,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb267-4"><a href="#cb267-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb267-5"><a href="#cb267-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb267-6"><a href="#cb267-6" aria-hidden="true" tabindex="-1"></a>LMA_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 0 × 4
+## # ℹ 4 variables: Tissue &lt;chr&gt;, Life_form &lt;chr&gt;, Tissue_status &lt;chr&gt;, LMA &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="#cb269-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No data available on this</span></span></code></pre></div>
+<p>Nitrogen Leaf senesced</p>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="#cb270-1" aria-hidden="true" tabindex="-1"></a>Nitrogen_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb270-2"><a href="#cb270-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Nitrogen)<span class="sc">%&gt;%</span></span>
+<span id="cb270-3"><a href="#cb270-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Nitrogen,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb270-4"><a href="#cb270-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb270-5"><a href="#cb270-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb270-6"><a href="#cb270-6" aria-hidden="true" tabindex="-1"></a>Nitrogen_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 49 × 4
+##    Tissue Life_form Tissue_status Nitrogen
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;
+##  1 leaf   T         senesced         16.8 
+##  2 leaf   T         senesced          9.37
+##  3 leaf   T         senesced         14.8 
+##  4 leaf   L         senesced         15.1 
+##  5 leaf   L         senesced         10.1 
+##  6 leaf   L         senesced         11.4 
+##  7 leaf   T         senesced         12.4 
+##  8 leaf   T         senesced         12.6 
+##  9 leaf   T         senesced         11.9 
+## 10 leaf   L         senesced         11.8 
+## # ℹ 39 more rows</code></pre>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="#cb272-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Nitrogen_leaf_senesced, Nitrogen<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Nitrogen by Life_form
+## t = 2.4569, df = 34.595, p-value = 0.01918
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  0.5288609 5.5728391
+## sample estimates:
+## mean in group L mean in group T 
+##        15.59125        12.54040</code></pre>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="#cb274-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nitrogen higher in senesced liana leaves than senesced tree leaves (t= 2.4569, df=34.595, p&lt; 0.0191)</span></span></code></pre></div>
+<p>Phosphorus</p>
+<p>leaf senesced</p>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="#cb275-1" aria-hidden="true" tabindex="-1"></a>Phosphorus_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb275-2"><a href="#cb275-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Phosphorus)<span class="sc">%&gt;%</span></span>
+<span id="cb275-3"><a href="#cb275-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Phosphorus,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb275-4"><a href="#cb275-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb275-5"><a href="#cb275-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;senesced&#39;</span>))</span>
+<span id="cb275-6"><a href="#cb275-6" aria-hidden="true" tabindex="-1"></a>Phosphorus_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 44 × 4
+##    Tissue Life_form Tissue_status Phosphorus
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;              &lt;dbl&gt;
+##  1 leaf   T         senesced            0.59
+##  2 leaf   T         senesced            1.92
+##  3 leaf   T         senesced            1.87
+##  4 leaf   L         senesced            0.8 
+##  5 leaf   L         senesced            0.83
+##  6 leaf   L         senesced            0.42
+##  7 leaf   T         senesced            0.22
+##  8 leaf   T         senesced            0.28
+##  9 leaf   T         senesced            0.28
+## 10 leaf   L         senesced            0.44
+## # ℹ 34 more rows</code></pre>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Phosphorus_leaf_senesced, Phosphorus<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Phosphorus by Life_form
+## t = 0.031744, df = 40.829, p-value = 0.9748
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -0.3280491  0.3385253
+## sample estimates:
+## mean in group L mean in group T 
+##       0.8652381       0.8600000</code></pre>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference between Phosphorus in senesced liana leaves than senesced tree leaves (t= 0.0317, df=40.829, p&lt; 0.9748)</span></span></code></pre></div>
+<p>Carbon</p>
+<p>leaf senesced</p>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="#cb280-1" aria-hidden="true" tabindex="-1"></a>Carbon_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb280-2"><a href="#cb280-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Carbon)<span class="sc">%&gt;%</span></span>
+<span id="cb280-3"><a href="#cb280-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Carbon,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb280-4"><a href="#cb280-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb280-5"><a href="#cb280-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;senesced&#39;</span>))</span>
+<span id="cb280-6"><a href="#cb280-6" aria-hidden="true" tabindex="-1"></a>Carbon_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 53 × 4
+##    Tissue Life_form Tissue_status Carbon
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
+##  1 leaf   T         senesced         407
+##  2 leaf   T         senesced         380
+##  3 leaf   T         senesced         478
+##  4 leaf   L         senesced         470
+##  5 leaf   L         senesced         435
+##  6 leaf   L         senesced         441
+##  7 leaf   T         senesced         502
+##  8 leaf   T         senesced         502
+##  9 leaf   T         senesced         487
+## 10 leaf   L         senesced         452
+## # ℹ 43 more rows</code></pre>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Carbon_leaf_senesced, Carbon<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Carbon by Life_form
+## t = 0.19855, df = 48.049, p-value = 0.8434
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -29.68624  36.19201
+## sample estimates:
+## mean in group L mean in group T 
+##        437.2636        434.0107</code></pre>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference in carbon of senesced liana leaves and senesced tree leaves.</span></span></code></pre></div>
+<p>Lignin</p>
+<p>leaf senesced</p>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="#cb285-1" aria-hidden="true" tabindex="-1"></a>Lignin_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb285-2"><a href="#cb285-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form,Tissue_status, Lignin)<span class="sc">%&gt;%</span></span>
+<span id="cb285-3"><a href="#cb285-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Lignin,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb285-4"><a href="#cb285-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb285-5"><a href="#cb285-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status,<span class="st">&#39;senesced&#39;</span>))</span>
+<span id="cb285-6"><a href="#cb285-6" aria-hidden="true" tabindex="-1"></a>Lignin_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 47 × 4
+##    Tissue Life_form Tissue_status Lignin
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
+##  1 leaf   T         senesced       14   
+##  2 leaf   T         senesced        6.64
+##  3 leaf   T         senesced       16.4 
+##  4 leaf   L         senesced       23.0 
+##  5 leaf   L         senesced       17.4 
+##  6 leaf   L         senesced       23.8 
+##  7 leaf   T         senesced       16.3 
+##  8 leaf   T         senesced       14.0 
+##  9 leaf   T         senesced       18.6 
+## 10 leaf   L         senesced       20.0 
+## # ℹ 37 more rows</code></pre>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="#cb287-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Lignin_leaf_senesced, Lignin<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Lignin by Life_form
+## t = 0.37905, df = 43.96, p-value = 0.7065
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -3.235893  4.735020
+## sample estimates:
+## mean in group L mean in group T 
+##        15.73636        14.98680</code></pre>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference between senesced liana leaves and senesced leaves (t=0.3790, df=43.96, p=0.7065).</span></span></code></pre></div>
+<p>Soluble tannins</p>
+<p>leaf senesced</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="#cb290-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(litterquality)</span></code></pre></div>
+<pre><code>## Rows: 7,256
+## Columns: 35
+## $ `Literature Source`   &lt;chr&gt; &quot;679&quot;, &quot;646&quot;, &quot;679&quot;, &quot;679&quot;, &quot;679&quot;, &quot;781&quot;, &quot;795&quot;,…
+## $ Kingdom               &lt;chr&gt; &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Plantae&quot;, &quot;Pla…
+## $ Subkingdom            &lt;chr&gt; &quot;Tracheobionta&quot;, &quot;Tracheobionta&quot;, &quot;Tracheobionta…
+## $ Division              &lt;chr&gt; &quot;Magnoliophyta&quot;, &quot;Magnoliophyta&quot;, &quot;Magnoliophyta…
+## $ Class                 &lt;chr&gt; &quot;Magnoliopsida&quot;, &quot;Magnoliopsida&quot;, &quot;Magnoliopsida…
+## $ Subclass              &lt;chr&gt; &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Rosidae&quot;, &quot;Ros…
+## $ Order                 &lt;chr&gt; &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fabales&quot;, &quot;Fab…
+## $ Family                &lt;chr&gt; &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, &quot;Fabaceae&quot;, …
+## $ Genus                 &lt;chr&gt; &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Abarema&quot;, &quot;Aba…
+## $ Species               &lt;chr&gt; &quot;Abarema curvicarpa&quot;, &quot;Abarema jupunba&quot;, &quot;Abarem…
+## $ Life_form             &lt;chr&gt; &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;T&quot;…
+## $ Latitude              &lt;dbl&gt; 5.30, 4.00, 5.33, 5.30, 5.30, NA, -1.75, -1.75, …
+## $ Longitude             &lt;dbl&gt; -53.50, -53.00, -52.83, -53.50, -53.50, NA, -47.…
+## $ `MAT(degC)`           &lt;dbl&gt; 25.8, 25.0, 25.8, 25.8, 25.8, NA, 25.9, 25.9, 25…
+## $ `MAP(mm)`             &lt;dbl&gt; 3000.0, 3000.0, 2900.0, 3000.0, 3000.0, NA, 2836…
+## $ Altitude              &lt;dbl&gt; NA, NA, NA, NA, NA, NA, 48, 48, 48, 48, NA, NA, …
+## $ Site1                 &lt;chr&gt; &quot;St-Elie(DVD)&quot;, NA, &quot;Paracou&quot;, &quot;St-Elie(DVD)&quot;, &quot;…
+## $ Country               &lt;chr&gt; &quot;French Guiana&quot;, &quot;French Guiana&quot;, &quot;French Guiana…
+## $ Continent             &lt;chr&gt; &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, &quot;SAm&quot;, NA, &quot;SAm&quot;, &quot;S…
+## $ ClimRegion            &lt;chr&gt; &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, &quot;TR&quot;, NA, &quot;TR&quot;, &quot;TR&quot;, &quot;T…
+## $ Tissue                &lt;chr&gt; &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, &quot;leaf&quot;, …
+## $ SLA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ LMA                   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Nitrogen              &lt;dbl&gt; 24.0, 21.1, 18.0, 20.0, 19.0, NA, 21.6, 21.3, 29…
+## $ Phosphorus            &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Calcium               &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Magnesium             &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Carbon                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_cond          &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tannins_wat           &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Lignin                &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Cellulose_percent     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Hemicellulose_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Fiber_content_percent &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Tissue_status         &lt;chr&gt; &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, &quot;live&quot;, …</code></pre>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="#cb292-1" aria-hidden="true" tabindex="-1"></a>Tannins_wat_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb292-2"><a href="#cb292-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Tannins_wat)<span class="sc">%&gt;%</span></span>
+<span id="cb292-3"><a href="#cb292-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Tannins_wat,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb292-4"><a href="#cb292-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb292-5"><a href="#cb292-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb292-6"><a href="#cb292-6" aria-hidden="true" tabindex="-1"></a>Tannins_wat_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 40 × 4
+##    Tissue Life_form Tissue_status Tannins_wat
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;               &lt;dbl&gt;
+##  1 leaf   T         senesced             2.41
+##  2 leaf   T         senesced             2.09
+##  3 leaf   T         senesced             4.28
+##  4 leaf   L         senesced             3.67
+##  5 leaf   L         senesced             0.99
+##  6 leaf   L         senesced             4.9 
+##  7 leaf   T         senesced             5.52
+##  8 leaf   T         senesced             6.75
+##  9 leaf   T         senesced             9.14
+## 10 leaf   L         senesced             6.6 
+## # ℹ 30 more rows</code></pre>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Tannins_wat_leaf_senesced, Tannins_wat<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Tannins_wat by Life_form
+## t = -0.47083, df = 37.302, p-value = 0.6405
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -2.380719  1.482719
+## sample estimates:
+## mean in group L mean in group T 
+##          4.1435          4.5925</code></pre>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference in Tannin water soluble between senesced liana leaves and three scenesced tree leaves (t=-0.4708, df=37.302, p=0.6405). </span></span></code></pre></div>
+<p>Calcium</p>
+<p>leaf</p>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="#cb297-1" aria-hidden="true" tabindex="-1"></a>Calcium_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb297-2"><a href="#cb297-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Calcium)<span class="sc">%&gt;%</span></span>
+<span id="cb297-3"><a href="#cb297-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Calcium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb297-4"><a href="#cb297-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb297-5"><a href="#cb297-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb297-6"><a href="#cb297-6" aria-hidden="true" tabindex="-1"></a>Calcium_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 44 × 4
+##    Tissue Life_form Tissue_status Calcium
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;
+##  1 leaf   T         senesced        25.5 
+##  2 leaf   T         senesced        35.2 
+##  3 leaf   T         senesced        11.4 
+##  4 leaf   L         senesced        26.9 
+##  5 leaf   L         senesced        44.9 
+##  6 leaf   L         senesced        10.3 
+##  7 leaf   T         senesced         2.95
+##  8 leaf   T         senesced         3.81
+##  9 leaf   T         senesced         3.43
+## 10 leaf   L         senesced        37.8 
+## # ℹ 34 more rows</code></pre>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Calcium_leaf_senesced, Calcium<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Calcium by Life_form
+## t = 1.3675, df = 40.647, p-value = 0.179
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -3.01161 15.63405
+## sample estimates:
+## mean in group L mean in group T 
+##        25.63905        19.32783</code></pre>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference in Calcium between senesced liana leaves and senesced tree leaves (t= 1.3675, df=40.647, p=0.179). </span></span></code></pre></div>
+<p>Magnesium</p>
+<p>leaf senesced</p>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="#cb302-1" aria-hidden="true" tabindex="-1"></a>Magnesium_leaf_senesced<span class="ot">&lt;-</span>litterquality<span class="sc">%&gt;%</span></span>
+<span id="cb302-2"><a href="#cb302-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Tissue, Life_form, Tissue_status, Magnesium)<span class="sc">%&gt;%</span></span>
+<span id="cb302-3"><a href="#cb302-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(Magnesium,<span class="st">&#39;NA&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb302-4"><a href="#cb302-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue,<span class="st">&#39;leaf&#39;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb302-5"><a href="#cb302-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(Tissue_status, <span class="st">&quot;senesced&quot;</span>))</span>
+<span id="cb302-6"><a href="#cb302-6" aria-hidden="true" tabindex="-1"></a>Magnesium_leaf_senesced</span></code></pre></div>
+<pre><code>## # A tibble: 40 × 4
+##    Tissue Life_form Tissue_status Magnesium
+##    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;             &lt;dbl&gt;
+##  1 leaf   T         senesced           2.78
+##  2 leaf   T         senesced           3.07
+##  3 leaf   T         senesced           4.21
+##  4 leaf   L         senesced           2.91
+##  5 leaf   L         senesced           3.98
+##  6 leaf   L         senesced           3.97
+##  7 leaf   T         senesced           0.72
+##  8 leaf   T         senesced           1.03
+##  9 leaf   T         senesced           1.25
+## 10 leaf   L         senesced           7.35
+## # ℹ 30 more rows</code></pre>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data=</span>Magnesium_leaf_senesced, Magnesium<span class="sc">~</span>Life_form)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Magnesium by Life_form
+## t = 1.3074, df = 37.315, p-value = 0.1991
+## alternative hypothesis: true difference in means between group L and group T is not equal to 0
+## 95 percent confidence interval:
+##  -0.3966316  1.8406316
+## sample estimates:
+## mean in group L mean in group T 
+##           3.146           2.424</code></pre>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No difference in Magnesium between senesced liana leaves and tree ones (t=1.3074, df=37.315, p=0.1991).</span></span></code></pre></div>
+</div>
 </div>
 </div>
 

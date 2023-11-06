@@ -670,47 +670,6 @@ litterquality<-read_csv(file="Liana_perspective_datab.csv",
 ## Compute chemical traits average per tissue
 
 
-```{r}
-glimpse(litterquality)
-litterquality_avg<-litterquality%>%
-  rename(Life_form=`Life_form`)%>%
-  mutate(Life_form=as.factor(Life_form),
-         Tissue=as.factor(Tissue),
-         SLA=as.numeric(SLA),
-         LMA=as.numeric(LMA),
-         Tannins_cond=as.numeric(Tannins_cond),
-         Tannins_wat=as.numeric(Tannins_wat),
-         Cellulose=Cellulose_percent, 
-         Hemi_cellu=Hemicellulose_percent,
-         Fiber=Fiber_content_percent,
-         Magnesium=as.numeric(Magnesium))%>%
-    group_by(Tissue, Life_form, Tissue_status)%>%
-  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
-                   SD_SLA=sd(SLA, na.rm=T),
-                   mean_LMA=mean(LMA, na.rm=T),
-                   SD_LMA=sd(LMA, na.rm=T),
-                   mean_C=mean(Carbon, na.rm=T),
-                   SD_C=sd(Carbon, na.rm=T),
-                   mean_N=mean(Nitrogen, na.rm=T),
-                   SD_N=sd(Nitrogen, na.rm=T),
-                   mean_P=mean(Phosphorus, na.rm=T),
-                   SD_P=sd(Phosphorus, na.rm=T),
-                   mean_Mg=mean(Magnesium, na.rm=T),
-                   SD_Mg=sd(Magnesium, na.rm=T),
-                   mean_Ca=mean(Calcium, na.rm=T),
-                   SD_Ca=sd(Calcium, na.rm=T),
-                   mean_Lignin=mean(Lignin, na.rm=T),
-                   SD_Lignin=sd(Lignin, na.rm=T),
-                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
-                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
-                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
-                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
-                   size=n()
-)
-litterquality_avg
-```
-
-
 Average with tissue status (live or senesced)
 
 ```{r}
@@ -750,6 +709,142 @@ litterquality_avg3<-litterquality%>%
 litterquality_avg3
 ```
 
+
+## Compute chemical traits average per leaf for tissue status with sample size per element
+
+### live leaf
+
+
+SLA
+```{r}
+glimpse(litterquality)
+SLA_avg_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, SLA)%>%
+  filter(!str_detect(SLA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   size_SLA=n()
+)
+SLA_avg_live
+```
+
+
+LMA
+```{r}
+LMA_avg_status<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, LMA)%>%
+  filter(!str_detect(LMA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   size_LMA=n()
+)
+LMA_avg_status
+```
+
+Nitrogen
+
+```{r}
+Nitrogen_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Nitrogen=mean(Nitrogen, na.rm=T),
+                   SD_Nitrogen=sd(Nitrogen, na.rm=T),
+                   size_Nitrogen=n()
+)
+Nitrogen_avg_status
+```
+
+Phosphorus
+```{r}
+Phosphorus_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Phosphorus=mean(Phosphorus, na.rm=T),
+                   SD_Phosphorus=sd(Phosphorus, na.rm=T),
+                   size_Phosphorus=n()
+)
+Phosphorus_avg_status
+```
+
+
+Carbon
+```{r}
+Carbon_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Carbon=mean(Carbon, na.rm=T),
+                   SD_Carbon=sd(Carbon, na.rm=T),
+                   size_Carbon=n()
+)
+Carbon_avg_status
+```
+
+Lignin
+
+```{r}
+Lignin_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   size_Lignin=n()
+)
+Lignin_avg_status
+```
+
+```{r}
+Tannins_wat_avg<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Tannin_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   size_Tannin_wat=n()
+)
+Tannins_wat_avg
+```
+
+
+Magnesium
+```{r}
+Magnesium_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Magnesium=mean(Magnesium, na.rm=T),
+                   SD_Magnesium=sd(Magnesium, na.rm=T),
+                   size_Magnesium=n()
+)
+Magnesium_avg_status
+```
+
+Calcium
+```{r}
+Calcium_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Calcium=mean(Calcium, na.rm=T),
+                   SD_Calcium=sd(Calcium, na.rm=T),
+                   size_Calcium=n()
+)
+Calcium_avg_status
+```
 
 ## Carry out t.test on different chemical for leaf do for live and senesced ones
 
