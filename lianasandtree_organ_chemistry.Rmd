@@ -1110,3 +1110,17 @@ t.test(data=Magnesium_leaf_senesced, Magnesium~Life_form)
 
 # No difference in Magnesium between senesced liana leaves and tree ones (t=1.3074, df=37.315, p=0.1991).
 ```
+
+This manuscript when submitted to "Global Change Biology", reviewer asked whether we included Asner and Martin data in our database. Our answer was not because the Asner and Martin 2012 only provide mean across of lianas species and across all trees species. Our database was on individual species. However, since we lacked information on living leaf carbon, lignin, soluble tannins, and magnesium, then we used the values provided by Asner and Martin 2012.
+For lianas (sample size = 778)
+1. Lignin %: mean (SD) = 21.94(8.75)
+2. Soluble tannins %: mean (SD) = 3.745(2.759)
+3. Magnesium (mg/g): mean (SD) = 3.2(1.8)
+4. Carbon (mg/g): means (SD) = 478.1(33.5)
+
+For trees (sample size = 6496)
+1. Lignin %: mean (SD) = 24.77(10.06)
+2. Soluble tannins %: mean (SD) = 4.677(2.574)
+3. Magnesium (mg/g): mean (SD) = 2.6(1.4)
+4. Carbon (mg/g): mean (SD) = 492.4(32.3)
+
