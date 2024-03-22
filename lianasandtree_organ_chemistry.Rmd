@@ -1,0 +1,529 @@
+---
+title: "Liana and tree tissues chemistry"
+author: "[**_Gbadamassi G.O. Dossa_**](https://scholar.google.com/citations?user=w20AkZcAAAAJ&hl=en)"
+date: (Created on Jan 3 2022 and last updated on `r format(Sys.time(), "%a %b %d %Y %H:%M:%S")`)
+output: 
+#rmdformats::material
+  html_document:
+    fig_caption: yes #Enabling figure caption
+    theme: spacelab #readable #sandstone #spacelab #flatly
+    highlight: pygments #tango #kate
+    toc: TRUE # Enabling table of content (toc) on the left side of output
+    toc_depth: 3 # Showing toc up to 3 headings below (i.e.,1, 1.1, 1.1.1)
+    number_sections: TRUE # Number sections
+    toc_float:
+      collapsed: TRUE # Allows the toc to collapse if the reading section is not concerned
+      smooth_scroll: TRUE # Allows smoth scrolling of toc
+      toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Here, we are reporting the differences in chemical content of different tissues/organs from lianas and not lianas (self-supporting trees).  
+We compiled data from an earlier compilation made by (Wyka et al., 2013)[https://www.jstor.org/stable/42801631] on leaves complemented by data from the following articles (Dossa et al., 2016[], 2020[]; Heineman et al., 2016[]; Jones et al., 2019[]; Li et al., 2013[]; Santiago, 2010[]; Scowcroft, 1997[]) on leaves, bark, and wood. Please refer to individual articles for detailed measurement protocol.
+* Values are the mean values provided by Asner and Martin 2012 [].
+Functional trait classification follows (Asner & Martin 2012). Traits related to metabolism and growth include nitrogen, and phosphorus concentrations; traits related to structural defense include carbon, lignin, water soluble tannins, and condensed tannins; and traits associated with metabolism and maintenance include concentrations of calcium and magnesium.
+
+## Input file
+```{r}
+litterquality<-read_csv(file="Liana_perspective_datab.csv",
+                        col_types = list(`Literature Source` = col_character(),
+  Kingdom = col_character(),
+  Subkingdom = col_character(),
+  Division = col_character(),
+  Class = col_character(),
+  Subclass = col_character(),
+  Order = col_character(),
+  Family = col_character(),
+  Genus = col_character(),
+  Species = col_character(),
+  `Life Form` = col_character(),
+  Latitude = col_double(),
+  Longitude = col_double(),
+  `MAT(degC)` = col_double(),
+  `MAP(mm)` = col_double(),
+  Altitude = col_double(),
+  Site1 = col_character(),
+  Country = col_character(),
+  Continent = col_character(),
+  ClimRegion = col_character(),
+  Tissue = col_character(),
+  SLA = col_double(),
+  LMA = col_double(),
+  Nitrogen = col_double(),
+  Phosphorus = col_double(),
+  Calcium = col_double(),
+  Magnesium = col_double(),
+  Carbon = col_double(),
+  Tannins_cond = col_double(),
+  Tannins_wat = col_double(),
+  Lignin = col_double(),
+  Cellulose_percent = col_double(),
+  Hemicellulose_percent = col_double(),
+  Fiber_content_percent = col_double(),
+  Tissue_status= col_character()))
+```
+
+
+
+## Compute chemical traits average per tissue
+
+
+Average with tissue status (live or senesced)
+
+```{r}
+litterquality_avg3<-litterquality%>%
+  group_by(Tissue, Life_form, Tissue_status)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   size_SLA=n(),
+                   mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   size_LMA=n(),
+                   mean_C=mean(Carbon, na.rm=T),
+                   SD_C=sd(Carbon, na.rm=T),
+                   size_C=n(),
+                   mean_N=mean(Nitrogen, na.rm=T),
+                   SD_N=sd(Nitrogen, na.rm=T),
+                   size_N=n(),
+                   mean_P=mean(Phosphorus, na.rm=T),
+                   SD_P=sd(Phosphorus, na.rm=T),
+                   size_P=n(),
+                   mean_Mg=mean(Magnesium, na.rm=T),
+                   SD_Mg=sd(Magnesium, na.rm=T),
+                   size_Mg=n(),
+                   mean_Ca=mean(Calcium, na.rm=T),
+                   SD_Ca=sd(Calcium, na.rm=T),
+                   size_Ca=n(),
+                   mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   size_Lignin=n(),
+                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   size_Tannin_wat=n(),
+                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
+                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
+                   size_Tannin_cond=n()
+)
+litterquality_avg3
+```
+
+
+## Compute chemical traits average per leaf for tissue status with sample size per element
+
+### live leaf
+
+
+SLA
+```{r}
+glimpse(litterquality)
+SLA_avg_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, SLA)%>%
+  filter(!str_detect(SLA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
+                   SD_SLA=sd(SLA, na.rm=T),
+                   size_SLA=n()
+)
+SLA_avg_live
+```
+
+
+LMA
+```{r}
+LMA_avg_status<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, LMA)%>%
+  filter(!str_detect(LMA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_LMA=mean(LMA, na.rm=T),
+                   SD_LMA=sd(LMA, na.rm=T),
+                   size_LMA=n()
+)
+LMA_avg_status
+```
+
+Nitrogen
+
+```{r}
+Nitrogen_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Nitrogen=mean(Nitrogen, na.rm=T),
+                   SD_Nitrogen=sd(Nitrogen, na.rm=T),
+                   size_Nitrogen=n()
+)
+Nitrogen_avg_status
+```
+
+Phosphorus
+```{r}
+Phosphorus_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Phosphorus=mean(Phosphorus, na.rm=T),
+                   SD_Phosphorus=sd(Phosphorus, na.rm=T),
+                   size_Phosphorus=n()
+)
+Phosphorus_avg_status
+```
+
+
+Carbon
+```{r}
+Carbon_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Carbon=mean(Carbon, na.rm=T),
+                   SD_Carbon=sd(Carbon, na.rm=T),
+                   size_Carbon=n()
+)
+Carbon_avg_status
+```
+
+Lignin
+
+```{r}
+Lignin_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Lignin=mean(Lignin, na.rm=T),
+                   SD_Lignin=sd(Lignin, na.rm=T),
+                   size_Lignin=n()
+)
+Lignin_avg_status
+```
+
+```{r}
+Tannins_wat_avg<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Tannin_wat=mean(Tannins_wat, na.rm=T),
+                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
+                   size_Tannin_wat=n()
+)
+Tannins_wat_avg
+```
+
+
+Magnesium
+```{r}
+Magnesium_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Magnesium=mean(Magnesium, na.rm=T),
+                   SD_Magnesium=sd(Magnesium, na.rm=T),
+                   size_Magnesium=n()
+)
+Magnesium_avg_status
+```
+
+Calcium
+```{r}
+Calcium_avg_status<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  group_by(Tissue, Life_form,Tissue_status)%>%
+  dplyr::summarise(mean_Calcium=mean(Calcium, na.rm=T),
+                   SD_Calcium=sd(Calcium, na.rm=T),
+                   size_Calcium=n()
+)
+Calcium_avg_status
+```
+
+## Carry out t.test on different chemical for leaf do for live and senesced ones
+
+### Live leaves
+SLA
+Leaf live
+```{r}
+SLA_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status,SLA)%>%
+  filter(!str_detect(SLA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+SLA_live
+t.test(data=SLA_live, SLA~Life_form)
+# SLA higher for live liana leaves than live tree leaves (t=7.781, df=178.89, p<0.001)
+```
+
+
+LMA
+Leaf
+```{r}
+LMA_live<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, LMA)%>%
+  filter(!str_detect(LMA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+LMA_live
+t.test(data=LMA_live, LMA~Life_form)
+# Lower LMA in live liana leaves than live tree leaves (t=-9.271, df=308.54, p<0.001)
+```
+
+Nitrogen
+Leaf live
+```{r}
+Nitrogen_leaf_live<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+Nitrogen_leaf_live
+t.test(data=Nitrogen_leaf_live, Nitrogen~Life_form)
+
+# Nitrogen higher in live liana leaves than live tree leaves (t= 6.579, df=200.77, p< 0.001)
+```
+
+
+Phosphorus
+
+leaf live
+```{r}
+Phosphorus_leaf_live<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'live'))
+Phosphorus_leaf_live
+t.test(data=Phosphorus_leaf_live, Phosphorus~Life_form)
+
+# Phosphorus higher in live liana leaves than live tree leaves (t= 3.5446, df=136.69, p< 0.001)
+```
+
+Carbon
+
+leaf live
+```{r}
+Carbon_leaf_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'live'))
+Carbon_leaf_live
+
+# No information available so no test.
+```
+
+Lignin
+
+leaf live
+```{r}
+Lignin_leaf_live<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'live'))
+Lignin_leaf_live
+# No information available so no test.
+
+```
+
+Soluble tannins
+
+leaf live
+```{r}
+glimpse(litterquality)
+Tannins_wat_leaf_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+Tannins_wat_leaf_live
+# No information available so no test.
+
+```
+Calcium
+
+leaf
+```{r}
+Calcium_leaf_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+Calcium_leaf_live
+t.test(data=Calcium_leaf_live, Calcium~Life_form)
+
+# Calcium higher in live liana leaves than live tree leaves (t= 5.0489, df=91.74, p< 0.001)
+```
+
+
+Magnesium
+
+leaf live
+```{r}
+Magnesium_leaf_live<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "live"))
+Magnesium_leaf_live
+# No information available so no test.
+```
+
+
+### senesced leaves
+SLA
+Leaf senesced
+```{r}
+SLA_senesced<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status,SLA)%>%
+  filter(!str_detect(SLA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+SLA_senesced
+t.test(data=SLA_senesced, SLA~Life_form)
+# SLA higher for senesced liana leaves than senesced tree leaves (t=4.6501, df=41.941, p<0.001)
+```
+
+
+LMA
+Leaf
+```{r}
+LMA_senesced<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, LMA)%>%
+  filter(!str_detect(LMA,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+LMA_senesced
+# No data available on this
+```
+
+Nitrogen
+Leaf senesced
+```{r}
+Nitrogen_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Nitrogen)%>%
+  filter(!str_detect(Nitrogen,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+Nitrogen_leaf_senesced
+t.test(data=Nitrogen_leaf_senesced, Nitrogen~Life_form)
+
+# Nitrogen higher in senesced liana leaves than senesced tree leaves (t= 2.4569, df=34.595, p< 0.0191)
+```
+
+
+Phosphorus
+
+leaf senesced
+```{r}
+Phosphorus_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Phosphorus)%>%
+  filter(!str_detect(Phosphorus,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'senesced'))
+Phosphorus_leaf_senesced
+t.test(data=Phosphorus_leaf_senesced, Phosphorus~Life_form)
+
+# No difference between Phosphorus in senesced liana leaves than senesced tree leaves (t= 0.0317, df=40.829, p< 0.9748)
+```
+
+Carbon
+
+leaf senesced
+```{r}
+Carbon_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Carbon)%>%
+  filter(!str_detect(Carbon,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'senesced'))
+Carbon_leaf_senesced
+t.test(data=Carbon_leaf_senesced, Carbon~Life_form)
+
+# No difference in carbon of senesced liana leaves and senesced tree leaves.
+```
+
+Lignin
+
+leaf senesced
+```{r}
+Lignin_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form,Tissue_status, Lignin)%>%
+  filter(!str_detect(Lignin,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status,'senesced'))
+Lignin_leaf_senesced
+t.test(data=Lignin_leaf_senesced, Lignin~Life_form)
+# No difference between senesced liana leaves and senesced leaves (t=0.3790, df=43.96, p=0.7065).
+
+```
+
+Soluble tannins
+
+leaf senesced
+```{r}
+glimpse(litterquality)
+Tannins_wat_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Tannins_wat)%>%
+  filter(!str_detect(Tannins_wat,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+Tannins_wat_leaf_senesced
+t.test(data=Tannins_wat_leaf_senesced, Tannins_wat~Life_form)
+# No difference in Tannin water soluble between senesced liana leaves and three scenesced tree leaves (t=-0.4708, df=37.302, p=0.6405). 
+
+```
+Calcium
+
+leaf
+```{r}
+Calcium_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Calcium)%>%
+  filter(!str_detect(Calcium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+Calcium_leaf_senesced
+t.test(data=Calcium_leaf_senesced, Calcium~Life_form)
+
+# No difference in Calcium between senesced liana leaves and senesced tree leaves (t= 1.3675, df=40.647, p=0.179). 
+```
+
+
+Magnesium
+
+leaf senesced
+```{r}
+Magnesium_leaf_senesced<-litterquality%>%
+  select(Tissue, Life_form, Tissue_status, Magnesium)%>%
+  filter(!str_detect(Magnesium,'NA'))%>%
+  filter(str_detect(Tissue,'leaf'))%>%
+  filter(str_detect(Tissue_status, "senesced"))
+Magnesium_leaf_senesced
+t.test(data=Magnesium_leaf_senesced, Magnesium~Life_form)
+
+# No difference in Magnesium between senesced liana leaves and tree ones (t=1.3074, df=37.315, p=0.1991).
+```
+
+This manuscript when submitted to "Global Change Biology", reviewer asked whether we included Asner and Martin data in our database. Our answer was not because the Asner and Martin 2012 only provide mean across of lianas species and across all trees species. Our database was on individual species. However, since we lacked information on living leaf carbon, lignin, soluble tannins, and magnesium, then we used the values provided by Asner and Martin 2012.
+For lianas (sample size = 778)
+1. Lignin %: mean (SD) = 21.94(8.75)
+2. Soluble tannins %: mean (SD) = 3.745(2.759)
+3. Magnesium (mg/g): mean (SD) = 3.2(1.8)
+4. Carbon (mg/g): means (SD) = 478.1(33.5)
+
+For trees (sample size = 6496)
+1. Lignin %: mean (SD) = 24.77(10.06)
+2. Soluble tannins %: mean (SD) = 4.677(2.574)
+3. Magnesium (mg/g): mean (SD) = 2.6(1.4)
+4. Carbon (mg/g): mean (SD) = 492.4(32.3)
+
