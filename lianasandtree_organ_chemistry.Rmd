@@ -18,18 +18,20 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, include=TRUE, message=FALSE)
+getwd()
 ```
 
 # Introduction
 
 Here, we are reporting the differences in chemical content of different tissues/organs from lianas and not lianas (self-supporting trees).  
-We compiled data from an earlier compilation made by (Wyka et al., 2013)[https://www.jstor.org/stable/42801631] on leaves complemented by data from the following articles (Dossa et al., 2016[], 2020[]; Heineman et al., 2016[]; Jones et al., 2019[]; Li et al., 2013[]; Santiago, 2010[]; Scowcroft, 1997[]) on leaves, bark, and wood. Please refer to individual articles for detailed measurement protocol.
-* Values are the mean values provided by Asner and Martin 2012 [].
-Functional trait classification follows (Asner & Martin 2012). Traits related to metabolism and growth include nitrogen, and phosphorus concentrations; traits related to structural defense include carbon, lignin, water soluble tannins, and condensed tannins; and traits associated with metabolism and maintenance include concentrations of calcium and magnesium.
+We compiled data from an earlier compilation made by [Wyka et al., 2013](https://www.jstor.org/stable/42801631) on leaves complemented by data from the following articles [Dossa et al., 2016](https://www.nature.com/articles/srep34153), [Dossa et al., 2020](https://www.sciencedirect.com/science/article/abs/pii/S0378112720305090); [Heineman et al., 2016](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.13904); [Jones et al., 2019](https://link.springer.com/article/10.1007/s11104-019-04026-9); [Li et al., 2013](https://link.springer.com/article/10.1007/s11104-012-1337-x); [Santiago, 2010](https://onlinelibrary.wiley.com/doi/10.1111/j.1744-7429.2009.00604.x); [Scowcroft, 1997](https://www.jstor.org/stable/2560292) on leaves, bark, and wood. Please refer to individual articles for detailed measurement protocol.
+
+Functional trait classification follows [Asner and Martin 2012](https://onlinelibrary.wiley.com/doi/10.1111/j.1461-0248.2012.01821.x). Traits related to metabolism and growth include nitrogen, and phosphorus concentrations; traits related to structural defense include carbon, lignin, water soluble tannins, and condensed tannins; and traits associated with metabolism and maintenance include concentrations of calcium and magnesium.
 
 ## Input file
 ```{r}
+library(tidyverse)
 litterquality<-read_csv(file="Liana_perspective_datab.csv",
                         col_types = list(`Literature Source` = col_character(),
   Kingdom = col_character(),
@@ -73,44 +75,6 @@ litterquality<-read_csv(file="Liana_perspective_datab.csv",
 ## Compute chemical traits average per tissue
 
 
-Average with tissue status (live or senesced)
-
-```{r}
-litterquality_avg3<-litterquality%>%
-  group_by(Tissue, Life_form, Tissue_status)%>%
-  dplyr::summarise(mean_SLA=mean(SLA, na.rm=T),
-                   SD_SLA=sd(SLA, na.rm=T),
-                   size_SLA=n(),
-                   mean_LMA=mean(LMA, na.rm=T),
-                   SD_LMA=sd(LMA, na.rm=T),
-                   size_LMA=n(),
-                   mean_C=mean(Carbon, na.rm=T),
-                   SD_C=sd(Carbon, na.rm=T),
-                   size_C=n(),
-                   mean_N=mean(Nitrogen, na.rm=T),
-                   SD_N=sd(Nitrogen, na.rm=T),
-                   size_N=n(),
-                   mean_P=mean(Phosphorus, na.rm=T),
-                   SD_P=sd(Phosphorus, na.rm=T),
-                   size_P=n(),
-                   mean_Mg=mean(Magnesium, na.rm=T),
-                   SD_Mg=sd(Magnesium, na.rm=T),
-                   size_Mg=n(),
-                   mean_Ca=mean(Calcium, na.rm=T),
-                   SD_Ca=sd(Calcium, na.rm=T),
-                   size_Ca=n(),
-                   mean_Lignin=mean(Lignin, na.rm=T),
-                   SD_Lignin=sd(Lignin, na.rm=T),
-                   size_Lignin=n(),
-                   mean_Tannins_wat=mean(Tannins_wat, na.rm=T),
-                   SD_Tannin_wat=sd(Tannins_wat, na.rm=T),
-                   size_Tannin_wat=n(),
-                   mean_Tannin_cond=mean(Tannins_cond, na.rm=T),
-                   SD_Tannin_cond=sd(Tannins_cond, na.rm=T),
-                   size_Tannin_cond=n()
-)
-litterquality_avg3
-```
 
 
 ## Compute chemical traits average per leaf for tissue status with sample size per element
@@ -249,9 +213,10 @@ Calcium_avg_status<-litterquality%>%
 Calcium_avg_status
 ```
 
-## Carry out t.test on different chemical for leaf do for live and senesced ones
+## Carry out t.test on different chemical for live leaf and senesced leaf separately
 
 ### Live leaves
+
 SLA
 Leaf live
 ```{r}
@@ -351,6 +316,7 @@ Tannins_wat_leaf_live
 # No information available so no test.
 
 ```
+
 Calcium
 
 leaf
@@ -381,7 +347,8 @@ Magnesium_leaf_live
 ```
 
 
-### senesced leaves
+### Senesced leaves
+
 SLA
 Leaf senesced
 ```{r}
@@ -409,7 +376,9 @@ LMA_senesced
 ```
 
 Nitrogen
+
 Leaf senesced
+
 ```{r}
 Nitrogen_leaf_senesced<-litterquality%>%
   select(Tissue, Life_form,Tissue_status, Nitrogen)%>%
@@ -464,7 +433,7 @@ Lignin_leaf_senesced<-litterquality%>%
   filter(str_detect(Tissue_status,'senesced'))
 Lignin_leaf_senesced
 t.test(data=Lignin_leaf_senesced, Lignin~Life_form)
-# No difference between senesced liana leaves and senesced leaves (t=0.3790, df=43.96, p=0.7065).
+# No difference between senesced liana leaves and senesced leaves for lignin (t=0.3790, df=43.96, p=0.7065).
 
 ```
 
@@ -514,16 +483,30 @@ t.test(data=Magnesium_leaf_senesced, Magnesium~Life_form)
 # No difference in Magnesium between senesced liana leaves and tree ones (t=1.3074, df=37.315, p=0.1991).
 ```
 
-This manuscript when submitted to "Global Change Biology", reviewer asked whether we included Asner and Martin data in our database. Our answer was not because the Asner and Martin 2012 only provide mean across of lianas species and across all trees species. Our database was on individual species. However, since we lacked information on living leaf carbon, lignin, soluble tannins, and magnesium, then we used the values provided by Asner and Martin 2012.
+This manuscript when submitted to "Global Change Biology", reviewer asked whether we included Asner and Martin data in our database. Our answer was "not" because the Asner and Martin 2012 only provide mean across of lianas species and across all trees species. Our database was on individual species. However, since we lacked information on living leaf carbon, lignin, soluble tannins, and magnesium, then we used the values provided by Asner and Martin 2012.
+
 For lianas (sample size = 778)
-1. Lignin %: mean (SD) = 21.94(8.75)
-2. Soluble tannins %: mean (SD) = 3.745(2.759)
-3. Magnesium (mg/g): mean (SD) = 3.2(1.8)
-4. Carbon (mg/g): means (SD) = 478.1(33.5)
+
+1.    Lignin %: mean (SD) = 21.94(8.75)
+
+2.    Soluble tannins %: mean (SD) = 3.745(2.759)
+
+3.    Magnesium (mg/g): mean (SD) = 3.2(1.8)
+
+4.    Carbon (mg/g): means (SD) = 478.1(33.5)
 
 For trees (sample size = 6496)
-1. Lignin %: mean (SD) = 24.77(10.06)
-2. Soluble tannins %: mean (SD) = 4.677(2.574)
-3. Magnesium (mg/g): mean (SD) = 2.6(1.4)
-4. Carbon (mg/g): mean (SD) = 492.4(32.3)
 
+1.    Lignin %: mean (SD) = 24.77(10.06)
+
+2.    Soluble tannins %: mean (SD) = 4.677(2.574)
+
+3.    Magnesium (mg/g): mean (SD) = 2.6(1.4)
+
+4.    Carbon (mg/g): mean (SD) = 492.4(32.3)
+
+The analyses we carried out here are summarized in the Table 1 of the manuscript. 
+
+# Conclusions
+
+Trees and lianas coexist as the major woody components of forests worldwide, but they have very different ecological strategies, with lianas relying on trees for mechanical support. Consequently, trees and lianas may have evolved highly divergent stem, leaf, and root traits. Indeed, lianas and trees show some differences in terms of leaves, bark, wood chemistry. We have much data on leaves and very limited on other organs. 
