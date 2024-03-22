@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 
 Here, we are reporting the differences in chemical content of different tissues/organs from lianas and not lianas (self-supporting trees).  
-We compiled data from an earlier compilation made by (Wyka et al., 2013)[] on leaves complemented by data from the following articles (Dossa et al., 2016[], 2020[]; Heineman et al., 2016[]; Jones et al., 2019[]; Li et al., 2013[]; Santiago, 2010[]; Scowcroft, 1997[]) on leaves, bark, and wood. Please refer to individual articles for detailed measurement protocol.
+We compiled data from an earlier compilation made by (Wyka et al., 2013)[https://www.jstor.org/stable/42801631] on leaves complemented by data from the following articles (Dossa et al., 2016[], 2020[]; Heineman et al., 2016[]; Jones et al., 2019[]; Li et al., 2013[]; Santiago, 2010[]; Scowcroft, 1997[]) on leaves, bark, and wood. Please refer to individual articles for detailed measurement protocol.
 * Values are the mean values provided by Asner and Martin 2012 [].
 Functional trait classification follows (Asner & Martin 2012). Traits related to metabolism and growth include nitrogen, and phosphorus concentrations; traits related to structural defense include carbon, lignin, water soluble tannins, and condensed tannins; and traits associated with metabolism and maintenance include concentrations of calcium and magnesium.
 
