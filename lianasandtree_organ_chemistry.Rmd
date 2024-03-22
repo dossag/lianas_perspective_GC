@@ -383,6 +383,7 @@ SLA<-litterquality%>%
   filter(!str_detect(SLA,'NA'))
 SLA
 t.test(data=SLA, SLA~Life_form)
+
 ```
 
 
